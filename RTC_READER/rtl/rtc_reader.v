@@ -17,7 +17,8 @@ module rtc_reader #(
     output wire [7:0] weekday,
     output wire [7:0] year,
 
-    output reg rtc_valid
+    output reg rtc_valid,
+    output reg [7:0] debug_first_byte
 );
 
     // =================================================
@@ -211,10 +212,18 @@ module rtc_reader #(
     // =================================================
 
     always @(posedge clk) begin
-        if (reset)
-            rtc_valid <= 1'b0;
-        else if (rx_done)
-            rtc_valid <= 1'b1;
+    if (reset) begin
+        debug_first_byte <= 8'h00;
     end
+    else if (byte_complete && byte_count == 3'd0) begin
+        debug_first_byte <= rx_byte;
+    end
+end
+always @(posedge clk) begin
+    if (reset)
+        rtc_valid <= 1'b0;
+    else if (rx_done)
+        rtc_valid <= 1'b1;
+end
 
 endmodule

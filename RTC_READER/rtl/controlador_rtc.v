@@ -151,8 +151,7 @@ assign bit_count_enable =
 assign byte_enable =
        byte_complete && (state == RECEIVE);
 
-assign capture_enable =
-       fall_pulse && (state == RECEIVE);
+assign capture_enable = rise_pulse && (state==RECEIVE);
 
 assign bit_reset =
        (state != TRANSMIT);

@@ -1,44 +1,41 @@
+
 module control_fase (
     input wire clk,
     input wire reset,
     input wire enable,
-    input wire tick_5us,
+    input wire tick_20us,
 
     output reg phase,
     output reg rise_pulse,
     output reg fall_pulse
 );
 
-always @(posedge clk) begin
-
-    if (reset) begin
-        phase      <= 1'b0;
-        rise_pulse <= 1'b0;
-        fall_pulse <= 1'b0;
-    end
-    else begin
-
-        rise_pulse <= 1'b0;
-        fall_pulse <= 1'b0;
-
-        if (!enable) begin
-            phase <= 1'b0;
+    always @(posedge clk) begin
+        if (reset) begin
+            phase <= 0;
+            rise_pulse <= 0;
+            fall_pulse <= 0;
         end
+        else begin
+            rise_pulse <= 0;
+            fall_pulse <= 0;
 
-        else if (tick_5us) begin
-
-            if (phase == 1'b0) begin
-                phase      <= 1'b1;
-                rise_pulse <= 1'b1;
+            if (!enable) begin
+                phase <= 0;
             end
+            else if (tick_20us) begin
 
-            else begin
-                phase      <= 1'b0;
-                fall_pulse <= 1'b1;
+                if (phase == 0) begin
+                    phase <= 1;
+                    rise_pulse <= 1;
+                end
+                else begin
+                    phase <= 0;
+                    fall_pulse <= 1;
+                end
+
             end
-
         end
     end
-end
 
 endmodule

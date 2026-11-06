@@ -220,9 +220,12 @@ module tb_rtc_reader;
     end
 
     // Protección ante una simulación que no termine.
+    
     initial begin
-        #2_000_000;
+        #5_000_000; // 5 ms
         $fatal(1, "TIMEOUT: el RTC no completo la lectura");
     end
 
 endmodule
+
+

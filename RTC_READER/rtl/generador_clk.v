@@ -1,3 +1,4 @@
+
 module generador_clk #(
     parameter integer CLK_FREQ_HZ = 100_000_000
 )(
@@ -10,27 +11,24 @@ module generador_clk #(
     output wire fall_pulse
 );
 
-    wire tick_5us;
-    wire phase;
+    wire tick_20us;
 
     contador_divisor #(
         .CLK_FREQ_HZ(CLK_FREQ_HZ)
     ) divisor (
         .clk(clk),
         .reset(reset),
-        .tick_5us(tick_5us)
+        .tick_20us(tick_20us)
     );
 
     control_fase fase (
         .clk(clk),
         .reset(reset),
         .enable(enable_clk),
-        .tick_5us(tick_5us),
-        .phase(phase),
+        .tick_20us(tick_20us),
+        .phase(rtc_sclk),
         .rise_pulse(rise_pulse),
         .fall_pulse(fall_pulse)
     );
-
-    assign rtc_sclk = phase;
 
 endmodule
