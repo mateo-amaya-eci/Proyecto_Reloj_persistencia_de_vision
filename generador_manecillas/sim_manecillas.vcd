@@ -1,0 +1,113 @@
+$date
+	Sun Nov  8 14:02:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_generador_manecillas $end
+$var wire 32 ! PATRON_SEG [31:0] $end
+$var wire 32 " PATRON_MIN [31:0] $end
+$var wire 32 # PATRON_MANECILLAS [31:0] $end
+$var wire 32 $ PATRON_HORA [31:0] $end
+$var wire 32 % LED_OUT [31:0] $end
+$var reg 1 & MATCH_HORA $end
+$var reg 1 ' MATCH_MIN $end
+$var reg 1 ( MATCH_SEG $end
+$var reg 32 ) ROM_OUT [31:0] $end
+$scope module uut $end
+$var wire 32 * LED_OUT [31:0] $end
+$var wire 1 & MATCH_HORA $end
+$var wire 1 ' MATCH_MIN $end
+$var wire 1 ( MATCH_SEG $end
+$var wire 32 + PATRON_MANECILLAS [31:0] $end
+$var wire 32 , ROM_OUT [31:0] $end
+$var wire 32 - PATRON_SEG [31:0] $end
+$var wire 32 . PATRON_MIN [31:0] $end
+$var wire 32 / PATRON_HORA [31:0] $end
+$scope module gen_hora $end
+$var wire 1 & MATCH_HORA $end
+$var wire 32 0 PATRON_HORA [31:0] $end
+$upscope $end
+$scope module gen_min $end
+$var wire 1 ' MATCH_MIN $end
+$var wire 32 1 PATRON_MIN [31:0] $end
+$upscope $end
+$scope module gen_seg $end
+$var wire 1 ( MATCH_SEG $end
+$var wire 32 2 PATRON_SEG [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+0(
+0'
+0&
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10000
+b1111111111111111111111111 %
+b1111111111111111111111111 *
+b1111111111111111111111111 #
+b1111111111111111111111111 +
+b1111111111111111111111111 !
+b1111111111111111111111111 -
+b1111111111111111111111111 2
+1(
+#20000
+b111111111111111111111 %
+b111111111111111111111 *
+b111111111111111111111 #
+b111111111111111111111 +
+b111111111111111111111 "
+b111111111111111111111 .
+b111111111111111111111 1
+b0 !
+b0 -
+b0 2
+1'
+0(
+#30000
+b111111111111111 %
+b111111111111111 *
+b111111111111111 #
+b111111111111111 +
+b111111111111111 $
+b111111111111111 /
+b111111111111111 0
+b0 "
+b0 .
+b0 1
+1&
+0'
+#40000
+b111111111111111111111 #
+b111111111111111111111 +
+b10000000000111111111111111111111 %
+b10000000000111111111111111111111 *
+b111111111111111111111 "
+b111111111111111111111 .
+b111111111111111111111 1
+b10000000000000000000000000000000 )
+b10000000000000000000000000000000 ,
+1'
+1&
+#50000

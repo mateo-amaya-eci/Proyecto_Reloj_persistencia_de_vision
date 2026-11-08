@@ -1,0 +1,182 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6513d0d30470 .scope module, "mapeo_color_manecillas" "mapeo_color_manecillas" 2 96;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "PATRON_SEG";
+    .port_info 1 /INPUT 32 "PATRON_MIN";
+    .port_info 2 /INPUT 32 "PATRON_HORA";
+    .port_info 3 /INPUT 32 "ROM_OUT";
+    .port_info 4 /OUTPUT 32 "CANAL_ROJO";
+    .port_info 5 /OUTPUT 32 "CANAL_VERDE";
+    .port_info 6 /OUTPUT 32 "CANAL_AZUL";
+o0x770c96ee8108 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+o0x770c96ee8138 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_0x6513d0d255c0 .functor OR 32, o0x770c96ee8108, o0x770c96ee8138, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+o0x770c96ee80d8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_0x6513d0d567a0 .functor OR 32, o0x770c96ee80d8, o0x770c96ee8138, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+o0x770c96ee80a8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_0x6513d0d56840 .functor OR 32, o0x770c96ee80a8, o0x770c96ee8138, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x6513d0d25730_0 .net "CANAL_AZUL", 31 0, L_0x6513d0d56840;  1 drivers
+v0x6513d0d257d0_0 .net "CANAL_ROJO", 31 0, L_0x6513d0d255c0;  1 drivers
+v0x6513d0d53a90_0 .net "CANAL_VERDE", 31 0, L_0x6513d0d567a0;  1 drivers
+v0x6513d0d53b50_0 .net "PATRON_HORA", 31 0, o0x770c96ee80a8;  0 drivers
+v0x6513d0d53c30_0 .net "PATRON_MIN", 31 0, o0x770c96ee80d8;  0 drivers
+v0x6513d0d53d10_0 .net "PATRON_SEG", 31 0, o0x770c96ee8108;  0 drivers
+v0x6513d0d53df0_0 .net "ROM_OUT", 31 0, o0x770c96ee8138;  0 drivers
+S_0x6513d0d306b0 .scope module, "tb_generador_manecillas" "tb_generador_manecillas" 3 3;
+ .timescale -9 -12;
+v0x6513d0d55f70_0 .net "LED_OUT", 31 0, L_0x6513d0d680e0;  1 drivers
+v0x6513d0d56080_0 .var "MATCH_HORA", 0 0;
+v0x6513d0d56120_0 .var "MATCH_MIN", 0 0;
+v0x6513d0d56210_0 .var "MATCH_SEG", 0 0;
+v0x6513d0d56300_0 .net "PATRON_HORA", 31 0, L_0x6513d0d67e00;  1 drivers
+v0x6513d0d56440_0 .net "PATRON_MANECILLAS", 31 0, L_0x6513d0d67fc0;  1 drivers
+v0x6513d0d564e0_0 .net "PATRON_MIN", 31 0, L_0x6513d0d67750;  1 drivers
+v0x6513d0d565d0_0 .net "PATRON_SEG", 31 0, L_0x6513d0d670d0;  1 drivers
+v0x6513d0d566e0_0 .var "ROM_OUT", 31 0;
+S_0x6513d0d53fb0 .scope module, "uut" "generador_manecillas_top" 3 16, 2 49 0, S_0x6513d0d306b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "MATCH_SEG";
+    .port_info 1 /INPUT 1 "MATCH_MIN";
+    .port_info 2 /INPUT 1 "MATCH_HORA";
+    .port_info 3 /INPUT 32 "ROM_OUT";
+    .port_info 4 /OUTPUT 32 "PATRON_SEG";
+    .port_info 5 /OUTPUT 32 "PATRON_MIN";
+    .port_info 6 /OUTPUT 32 "PATRON_HORA";
+    .port_info 7 /OUTPUT 32 "PATRON_MANECILLAS";
+    .port_info 8 /OUTPUT 32 "LED_OUT";
+L_0x6513d0d67ec0 .functor OR 32, L_0x6513d0d670d0, L_0x6513d0d67750, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x6513d0d67fc0 .functor OR 32, L_0x6513d0d67ec0, L_0x6513d0d67e00, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x6513d0d680e0 .functor OR 32, v0x6513d0d566e0_0, L_0x6513d0d67fc0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x6513d0d55620_0 .net "LED_OUT", 31 0, L_0x6513d0d680e0;  alias, 1 drivers
+v0x6513d0d55700_0 .net "MATCH_HORA", 0 0, v0x6513d0d56080_0;  1 drivers
+v0x6513d0d557f0_0 .net "MATCH_MIN", 0 0, v0x6513d0d56120_0;  1 drivers
+v0x6513d0d558f0_0 .net "MATCH_SEG", 0 0, v0x6513d0d56210_0;  1 drivers
+v0x6513d0d559c0_0 .net "PATRON_HORA", 31 0, L_0x6513d0d67e00;  alias, 1 drivers
+v0x6513d0d55ab0_0 .net "PATRON_MANECILLAS", 31 0, L_0x6513d0d67fc0;  alias, 1 drivers
+v0x6513d0d55b50_0 .net "PATRON_MIN", 31 0, L_0x6513d0d67750;  alias, 1 drivers
+v0x6513d0d55c20_0 .net "PATRON_SEG", 31 0, L_0x6513d0d670d0;  alias, 1 drivers
+v0x6513d0d55cf0_0 .net "ROM_OUT", 31 0, v0x6513d0d566e0_0;  1 drivers
+v0x6513d0d55d90_0 .net *"_ivl_0", 31 0, L_0x6513d0d67ec0;  1 drivers
+S_0x6513d0d542e0 .scope module, "gen_hora" "generador_horas" 2 83, 2 34 0, S_0x6513d0d53fb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "MATCH_HORA";
+    .port_info 1 /OUTPUT 32 "PATRON_HORA";
+P_0x6513d0d544e0 .param/l "MASCARA_HORA" 1 2 39, C4<00000000000000000111111111111111>;
+L_0x770c96e9f0a8 .functor BUFT 1, C4<00000000000000000111111111111111>, C4<0>, C4<0>, C4<0>;
+L_0x6513d0d67e00 .functor AND 32, L_0x6513d0d67810, L_0x770c96e9f0a8, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+v0x6513d0d545a0_0 .net "MATCH_HORA", 0 0, v0x6513d0d56080_0;  alias, 1 drivers
+v0x6513d0d54680_0 .net "PATRON_HORA", 31 0, L_0x6513d0d67e00;  alias, 1 drivers
+v0x6513d0d54760_0 .net *"_ivl_0", 31 0, L_0x6513d0d67810;  1 drivers
+v0x6513d0d54820_0 .net/2u *"_ivl_2", 31 0, L_0x770c96e9f0a8;  1 drivers
+LS_0x6513d0d67810_0_0 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_4 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_8 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_12 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_16 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_20 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_24 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_0_28 .concat [ 1 1 1 1], v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0, v0x6513d0d56080_0;
+LS_0x6513d0d67810_1_0 .concat [ 4 4 4 4], LS_0x6513d0d67810_0_0, LS_0x6513d0d67810_0_4, LS_0x6513d0d67810_0_8, LS_0x6513d0d67810_0_12;
+LS_0x6513d0d67810_1_4 .concat [ 4 4 4 4], LS_0x6513d0d67810_0_16, LS_0x6513d0d67810_0_20, LS_0x6513d0d67810_0_24, LS_0x6513d0d67810_0_28;
+L_0x6513d0d67810 .concat [ 16 16 0 0], LS_0x6513d0d67810_1_0, LS_0x6513d0d67810_1_4;
+S_0x6513d0d54960 .scope module, "gen_min" "generador_minutos" 2 77, 2 19 0, S_0x6513d0d53fb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "MATCH_MIN";
+    .port_info 1 /OUTPUT 32 "PATRON_MIN";
+P_0x6513d0d54b40 .param/l "MASCARA_MIN" 1 2 24, C4<00000000000111111111111111111111>;
+L_0x770c96e9f060 .functor BUFT 1, C4<00000000000111111111111111111111>, C4<0>, C4<0>, C4<0>;
+L_0x6513d0d67750 .functor AND 32, L_0x6513d0d67190, L_0x770c96e9f060, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+v0x6513d0d54be0_0 .net "MATCH_MIN", 0 0, v0x6513d0d56120_0;  alias, 1 drivers
+v0x6513d0d54cc0_0 .net "PATRON_MIN", 31 0, L_0x6513d0d67750;  alias, 1 drivers
+v0x6513d0d54da0_0 .net *"_ivl_0", 31 0, L_0x6513d0d67190;  1 drivers
+v0x6513d0d54e60_0 .net/2u *"_ivl_2", 31 0, L_0x770c96e9f060;  1 drivers
+LS_0x6513d0d67190_0_0 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_4 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_8 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_12 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_16 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_20 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_24 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_0_28 .concat [ 1 1 1 1], v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0, v0x6513d0d56120_0;
+LS_0x6513d0d67190_1_0 .concat [ 4 4 4 4], LS_0x6513d0d67190_0_0, LS_0x6513d0d67190_0_4, LS_0x6513d0d67190_0_8, LS_0x6513d0d67190_0_12;
+LS_0x6513d0d67190_1_4 .concat [ 4 4 4 4], LS_0x6513d0d67190_0_16, LS_0x6513d0d67190_0_20, LS_0x6513d0d67190_0_24, LS_0x6513d0d67190_0_28;
+L_0x6513d0d67190 .concat [ 16 16 0 0], LS_0x6513d0d67190_1_0, LS_0x6513d0d67190_1_4;
+S_0x6513d0d54fa0 .scope module, "gen_seg" "generador_segundos" 2 71, 2 4 0, S_0x6513d0d53fb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "MATCH_SEG";
+    .port_info 1 /OUTPUT 32 "PATRON_SEG";
+P_0x6513d0d55180 .param/l "MASCARA_SEG" 1 2 9, C4<00000001111111111111111111111111>;
+L_0x770c96e9f018 .functor BUFT 1, C4<00000001111111111111111111111111>, C4<0>, C4<0>, C4<0>;
+L_0x6513d0d670d0 .functor AND 32, L_0x6513d0d568e0, L_0x770c96e9f018, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+v0x6513d0d55250_0 .net "MATCH_SEG", 0 0, v0x6513d0d56210_0;  alias, 1 drivers
+v0x6513d0d55310_0 .net "PATRON_SEG", 31 0, L_0x6513d0d670d0;  alias, 1 drivers
+v0x6513d0d553f0_0 .net *"_ivl_0", 31 0, L_0x6513d0d568e0;  1 drivers
+v0x6513d0d554e0_0 .net/2u *"_ivl_2", 31 0, L_0x770c96e9f018;  1 drivers
+LS_0x6513d0d568e0_0_0 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_4 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_8 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_12 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_16 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_20 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_24 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_0_28 .concat [ 1 1 1 1], v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0, v0x6513d0d56210_0;
+LS_0x6513d0d568e0_1_0 .concat [ 4 4 4 4], LS_0x6513d0d568e0_0_0, LS_0x6513d0d568e0_0_4, LS_0x6513d0d568e0_0_8, LS_0x6513d0d568e0_0_12;
+LS_0x6513d0d568e0_1_4 .concat [ 4 4 4 4], LS_0x6513d0d568e0_0_16, LS_0x6513d0d568e0_0_20, LS_0x6513d0d568e0_0_24, LS_0x6513d0d568e0_0_28;
+L_0x6513d0d568e0 .concat [ 16 16 0 0], LS_0x6513d0d568e0_1_0, LS_0x6513d0d568e0_1_4;
+    .scope S_0x6513d0d306b0;
+T_0 ;
+    %vpi_call 3 29 "$dumpfile", "sim_manecillas.vcd" {0 0 0};
+    %vpi_call 3 30 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6513d0d306b0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56210_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56120_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56080_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x6513d0d566e0_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6513d0d56210_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56210_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6513d0d56120_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56120_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6513d0d56080_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6513d0d56080_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6513d0d56080_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6513d0d56120_0, 0, 1;
+    %pushi/vec4 2147483648, 0, 32;
+    %store/vec4 v0x6513d0d566e0_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 3 48 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x6513d0d306b0;
+T_1 ;
+    %vpi_call 3 52 "$monitor", "Tiempo=%0t ns | MATCH(S,M,H)=%b%b%b | PATRON_MANECILLAS=0x%h | LED_OUT=0x%h", $time, v0x6513d0d56210_0, v0x6513d0d56120_0, v0x6513d0d56080_0, v0x6513d0d56440_0, v0x6513d0d55f70_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "generador_manecillas.v";
+    "tb_generador_manecillas.v";
