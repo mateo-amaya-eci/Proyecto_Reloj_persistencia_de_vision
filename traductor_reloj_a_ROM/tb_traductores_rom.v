@@ -30,7 +30,6 @@ module tb_traductores_rom;
 
     // 4. Secuencia de prueba y monitoreo
     initial begin
-        // Archivo para visualización de ondas en GTKWave / WaveTrace
         $dumpfile("sim_traductores.vcd");
         $dumpvars(0, tb_traductores_rom);
 
@@ -56,7 +55,7 @@ module tb_traductores_rom;
         #10;
 
         // Caso 3: Media escala (30 seg, 30 min, 6 horas)
-        seg_in = 6 me_in = 6'd30;
+        seg_in = 6'd30;
         min_in = 6'd30;
         hor_in = 4'd6;
         #10;

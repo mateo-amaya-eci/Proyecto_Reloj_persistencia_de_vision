@@ -1,0 +1,134 @@
+$date
+	Sat Nov  7 21:37:49 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_traductores_rom $end
+$var wire 14 ! rom_seg [13:0] $end
+$var wire 14 " rom_min [13:0] $end
+$var wire 12 # rom_hor [11:0] $end
+$var reg 4 $ hor_in [3:0] $end
+$var reg 6 % min_in [5:0] $end
+$var reg 6 & seg_in [5:0] $end
+$scope module inst_hor $end
+$var wire 4 ' salida_h [3:0] $end
+$var wire 12 ( rom_h [11:0] $end
+$var wire 12 ) bus_sum [11:0] $end
+$var wire 12 * bus_shift [11:0] $end
+$upscope $end
+$scope module inst_min $end
+$var wire 6 + salida_m [5:0] $end
+$var wire 14 , rom_m [13:0] $end
+$var wire 14 - bus_sum [13:0] $end
+$var wire 14 . bus_shift [13:0] $end
+$upscope $end
+$scope module inst_seg $end
+$var wire 6 / salida_s [5:0] $end
+$var wire 14 0 rom_s [13:0] $end
+$var wire 14 1 bus_sum [13:0] $end
+$var wire 14 2 bus_shift [13:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 2
+b11110 1
+b0 0
+b0 /
+b0 .
+b11110 -
+b0 ,
+b0 +
+b100000000 *
+b100000110 )
+b10101 (
+b1 '
+b0 &
+b0 %
+b1 $
+b10101 #
+b0 "
+b0 !
+$end
+#10000
+b1000000 #
+b1000000 (
+b1100000110 )
+b1100000000 *
+b11 $
+b11 '
+b1000000 "
+b1000000 ,
+b111100011110 -
+b111100000000 .
+b1111 %
+b1111 +
+b1000000 !
+b1000000 0
+b111100011110 1
+b111100000000 2
+b1111 &
+b1111 /
+#20000
+b10000000 #
+b10000000 (
+b11000000110 )
+b11000000000 *
+b110 $
+b110 '
+b10000000 "
+b10000000 ,
+b1111000011110 -
+b1111000000000 .
+b11110 %
+b11110 +
+b10000000 !
+b10000000 0
+b1111000011110 1
+b1111000000000 2
+b11110 &
+b11110 /
+#30000
+b11000000 #
+b11000000 (
+b100100000110 )
+b100100000000 *
+b1001 $
+b1001 '
+b11000000 "
+b11000000 ,
+b10110100011110 -
+b10110100000000 .
+b101101 %
+b101101 +
+b11000000 !
+b11000000 0
+b10110100011110 1
+b10110100000000 2
+b101101 &
+b101101 /
+#40000
+b100000000 #
+b100000000 (
+b110000000110 )
+b110000000000 *
+b1100 $
+b1100 '
+b11111100 "
+b11111100 ,
+b11101100011110 -
+b11101100000000 .
+b111011 %
+b111011 +
+b11111100 !
+b11111100 0
+b11101100011110 1
+b11101100000000 2
+b111011 &
+b111011 /
+#50000

@@ -1,0 +1,126 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x62afe49d3bf0 .scope module, "tb_traductores_rom" "tb_traductores_rom" 2 3;
+ .timescale -9 -12;
+v0x62afe4a0a300_0 .var "hor_in", 3 0;
+v0x62afe4a0a3c0_0 .var "min_in", 5 0;
+v0x62afe4a0a460_0 .net "rom_hor", 11 0, L_0x62afe4a1b2f0;  1 drivers
+v0x62afe4a0a500_0 .net "rom_min", 13 0, L_0x62afe4a1aee0;  1 drivers
+v0x62afe4a0a5d0_0 .net "rom_seg", 13 0, L_0x62afe4a1aa80;  1 drivers
+v0x62afe4a0a6c0_0 .var "seg_in", 5 0;
+S_0x62afe49de180 .scope module, "inst_hor" "conversor_horas" 2 26, 3 5 0, S_0x62afe49d3bf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "salida_h";
+    .port_info 1 /OUTPUT 12 "rom_h";
+L_0x71b2d5bb71c8 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x62afe49e61b0_0 .net/2u *"_ivl_0", 7 0, L_0x71b2d5bb71c8;  1 drivers
+L_0x71b2d5bb7210 .functor BUFT 1, C4<000000000110>, C4<0>, C4<0>, C4<0>;
+v0x62afe49d8680_0 .net/2u *"_ivl_4", 11 0, L_0x71b2d5bb7210;  1 drivers
+L_0x71b2d5bb7258 .functor BUFT 1, C4<000000001100>, C4<0>, C4<0>, C4<0>;
+v0x62afe49d8720_0 .net/2u *"_ivl_8", 11 0, L_0x71b2d5bb7258;  1 drivers
+v0x62afe4a08d90_0 .net "bus_shift", 11 0, L_0x62afe4a1b070;  1 drivers
+v0x62afe4a08e70_0 .net "bus_sum", 11 0, L_0x62afe4a1b1b0;  1 drivers
+v0x62afe4a08fa0_0 .net "rom_h", 11 0, L_0x62afe4a1b2f0;  alias, 1 drivers
+v0x62afe4a09080_0 .net "salida_h", 3 0, v0x62afe4a0a300_0;  1 drivers
+L_0x62afe4a1b070 .concat [ 8 4 0 0], L_0x71b2d5bb71c8, v0x62afe4a0a300_0;
+L_0x62afe4a1b1b0 .arith/sum 12, L_0x62afe4a1b070, L_0x71b2d5bb7210;
+L_0x62afe4a1b2f0 .arith/div 12, L_0x62afe4a1b1b0, L_0x71b2d5bb7258;
+S_0x62afe4a091c0 .scope module, "inst_min" "conversor_minutos" 2 21, 4 5 0, S_0x62afe49d3bf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 6 "salida_m";
+    .port_info 1 /OUTPUT 14 "rom_m";
+L_0x71b2d5bb70f0 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a093a0_0 .net/2u *"_ivl_0", 7 0, L_0x71b2d5bb70f0;  1 drivers
+L_0x71b2d5bb7138 .functor BUFT 1, C4<00000000011110>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a094a0_0 .net/2u *"_ivl_4", 13 0, L_0x71b2d5bb7138;  1 drivers
+L_0x71b2d5bb7180 .functor BUFT 1, C4<00000000111100>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a09580_0 .net/2u *"_ivl_8", 13 0, L_0x71b2d5bb7180;  1 drivers
+v0x62afe4a09640_0 .net "bus_shift", 13 0, L_0x62afe4a1ac10;  1 drivers
+v0x62afe4a09720_0 .net "bus_sum", 13 0, L_0x62afe4a1ada0;  1 drivers
+v0x62afe4a09850_0 .net "rom_m", 13 0, L_0x62afe4a1aee0;  alias, 1 drivers
+v0x62afe4a09930_0 .net "salida_m", 5 0, v0x62afe4a0a3c0_0;  1 drivers
+L_0x62afe4a1ac10 .concat [ 8 6 0 0], L_0x71b2d5bb70f0, v0x62afe4a0a3c0_0;
+L_0x62afe4a1ada0 .arith/sum 14, L_0x62afe4a1ac10, L_0x71b2d5bb7138;
+L_0x62afe4a1aee0 .arith/div 14, L_0x62afe4a1ada0, L_0x71b2d5bb7180;
+S_0x62afe4a09a70 .scope module, "inst_seg" "conversor_segundos" 2 16, 5 5 0, S_0x62afe49d3bf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 6 "salida_s";
+    .port_info 1 /OUTPUT 14 "rom_s";
+L_0x71b2d5bb7018 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a09c50_0 .net/2u *"_ivl_0", 7 0, L_0x71b2d5bb7018;  1 drivers
+L_0x71b2d5bb7060 .functor BUFT 1, C4<00000000011110>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a09d30_0 .net/2u *"_ivl_4", 13 0, L_0x71b2d5bb7060;  1 drivers
+L_0x71b2d5bb70a8 .functor BUFT 1, C4<00000000111100>, C4<0>, C4<0>, C4<0>;
+v0x62afe4a09e10_0 .net/2u *"_ivl_8", 13 0, L_0x71b2d5bb70a8;  1 drivers
+v0x62afe4a09ed0_0 .net "bus_shift", 13 0, L_0x62afe4a0a7c0;  1 drivers
+v0x62afe4a09fb0_0 .net "bus_sum", 13 0, L_0x62afe4a1a940;  1 drivers
+v0x62afe4a0a0e0_0 .net "rom_s", 13 0, L_0x62afe4a1aa80;  alias, 1 drivers
+v0x62afe4a0a1c0_0 .net "salida_s", 5 0, v0x62afe4a0a6c0_0;  1 drivers
+L_0x62afe4a0a7c0 .concat [ 8 6 0 0], L_0x71b2d5bb7018, v0x62afe4a0a6c0_0;
+L_0x62afe4a1a940 .arith/sum 14, L_0x62afe4a0a7c0, L_0x71b2d5bb7060;
+L_0x62afe4a1aa80 .arith/div 14, L_0x62afe4a1a940, L_0x71b2d5bb70a8;
+    .scope S_0x62afe49d3bf0;
+T_0 ;
+    %vpi_call 2 33 "$dumpfile", "sim_traductores.vcd" {0 0 0};
+    %vpi_call 2 34 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x62afe49d3bf0 {0 0 0};
+    %vpi_call 2 36 "$display", "=========================================================================" {0 0 0};
+    %vpi_call 2 37 "$display", "          PRUEBA DE TRADUCTORES RELOJ A ROM (SEGUNDOS, MINUTOS, HORAS)   " {0 0 0};
+    %vpi_call 2 38 "$display", "=========================================================================" {0 0 0};
+    %vpi_call 2 39 "$display", " Tiempo(ns) | Seg_in -> ROM_Seg | Min_in -> ROM_Min | Hor_in -> ROM_Hor " {0 0 0};
+    %vpi_call 2 40 "$display", "-------------------------------------------------------------------------" {0 0 0};
+    %vpi_call 2 42 "$monitor", " %9t  |   %2d   ->   %3d   |   %2d   ->   %3d   |   %2d   ->   %3d", $time, v0x62afe4a0a6c0_0, v0x62afe4a0a5d0_0, v0x62afe4a0a3c0_0, v0x62afe4a0a500_0, v0x62afe4a0a300_0, v0x62afe4a0a460_0 {0 0 0};
+    %pushi/vec4 0, 0, 6;
+    %store/vec4 v0x62afe4a0a6c0_0, 0, 6;
+    %pushi/vec4 0, 0, 6;
+    %store/vec4 v0x62afe4a0a3c0_0, 0, 6;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x62afe4a0a300_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 15, 0, 6;
+    %store/vec4 v0x62afe4a0a6c0_0, 0, 6;
+    %pushi/vec4 15, 0, 6;
+    %store/vec4 v0x62afe4a0a3c0_0, 0, 6;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x62afe4a0a300_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 30, 0, 6;
+    %store/vec4 v0x62afe4a0a6c0_0, 0, 6;
+    %pushi/vec4 30, 0, 6;
+    %store/vec4 v0x62afe4a0a3c0_0, 0, 6;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x62afe4a0a300_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 45, 0, 6;
+    %store/vec4 v0x62afe4a0a6c0_0, 0, 6;
+    %pushi/vec4 45, 0, 6;
+    %store/vec4 v0x62afe4a0a3c0_0, 0, 6;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x62afe4a0a300_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 59, 0, 6;
+    %store/vec4 v0x62afe4a0a6c0_0, 0, 6;
+    %pushi/vec4 59, 0, 6;
+    %store/vec4 v0x62afe4a0a3c0_0, 0, 6;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x62afe4a0a300_0, 0, 4;
+    %delay 10000, 0;
+    %vpi_call 2 75 "$display", "=========================================================================" {0 0 0};
+    %vpi_call 2 76 "$display", "Simulaci\303\263n completada con \303\251xito." {0 0 0};
+    %vpi_call 2 77 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "tb_traductores_rom.v";
+    "conversor_horas.v";
+    "conversor_minutos.v";
+    "conversor_segundos.v";
