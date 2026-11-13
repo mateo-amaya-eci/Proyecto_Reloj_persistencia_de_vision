@@ -1,0 +1,64 @@
+$date
+	Wed Nov 11 10:53:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_generador_manecillas_rgb $end
+$var wire 10 ! LED_R [9:0] $end
+$var wire 10 " LED_G [9:0] $end
+$var wire 10 # LED_B [9:0] $end
+$var reg 1 $ MATCH_HORA $end
+$var reg 1 % MATCH_MIN $end
+$var reg 1 & MATCH_SEG $end
+$scope module dut $end
+$var wire 10 ' LED_B [9:0] $end
+$var wire 10 ( LED_G [9:0] $end
+$var wire 10 ) LED_R [9:0] $end
+$var wire 1 $ MATCH_HORA $end
+$var wire 1 % MATCH_MIN $end
+$var wire 1 & MATCH_SEG $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+0&
+0%
+0$
+b0 #
+b0 "
+b0 !
+$end
+#10000
+b1111111111 !
+b1111111111 )
+1&
+#20000
+b11111111 #
+b11111111 '
+b0 !
+b0 )
+1%
+0&
+#30000
+b11111 "
+b11111 (
+b0 #
+b0 '
+1$
+0%
+#40000
+b11111111 #
+b11111111 '
+b1111111111 !
+b1111111111 )
+1%
+1&
+#50000

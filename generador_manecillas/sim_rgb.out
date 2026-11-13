@@ -1,0 +1,103 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x614961247a70 .scope module, "tb_generador_manecillas_rgb" "tb_generador_manecillas_rgb" 2 4;
+ .timescale -9 -12;
+v0x614961261740_0 .net "LED_B", 9 0, L_0x614961272330;  1 drivers
+v0x614961261820_0 .net "LED_G", 9 0, L_0x614961271fc0;  1 drivers
+v0x6149612618c0_0 .net "LED_R", 9 0, L_0x614961271d60;  1 drivers
+v0x614961261990_0 .var "MATCH_HORA", 0 0;
+v0x614961261a60_0 .var "MATCH_MIN", 0 0;
+v0x614961261b00_0 .var "MATCH_SEG", 0 0;
+S_0x614961247c00 .scope module, "dut" "generador_manecillas_rgb" 2 14, 3 2 0, S_0x614961247a70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "MATCH_SEG";
+    .port_info 1 /INPUT 1 "MATCH_MIN";
+    .port_info 2 /INPUT 1 "MATCH_HORA";
+    .port_info 3 /OUTPUT 10 "LED_R";
+    .port_info 4 /OUTPUT 10 "LED_G";
+    .port_info 5 /OUTPUT 10 "LED_B";
+P_0x61496120ccf0 .param/l "MASCARA_HORA" 1 3 17, C4<0000011111>;
+P_0x61496120cd30 .param/l "MASCARA_MIN" 1 3 16, C4<0011111111>;
+P_0x61496120cd70 .param/l "MASCARA_SEG" 1 3 15, C4<1111111111>;
+L_0x73e209536018 .functor BUFT 1, C4<1111111111>, C4<0>, C4<0>, C4<0>;
+L_0x614961271d60 .functor AND 10, L_0x614961261bd0, L_0x73e209536018, C4<1111111111>, C4<1111111111>;
+L_0x73e209536060 .functor BUFT 1, C4<0000011111>, C4<0>, C4<0>, C4<0>;
+L_0x614961271fc0 .functor AND 10, L_0x614961271e70, L_0x73e209536060, C4<1111111111>, C4<1111111111>;
+L_0x73e2095360a8 .functor BUFT 1, C4<0011111111>, C4<0>, C4<0>, C4<0>;
+L_0x614961272330 .functor AND 10, L_0x6149612720d0, L_0x73e2095360a8, C4<1111111111>, C4<1111111111>;
+v0x61496120cf50_0 .net "LED_B", 9 0, L_0x614961272330;  alias, 1 drivers
+v0x614961260d10_0 .net "LED_G", 9 0, L_0x614961271fc0;  alias, 1 drivers
+v0x614961260df0_0 .net "LED_R", 9 0, L_0x614961271d60;  alias, 1 drivers
+v0x614961260eb0_0 .net "MATCH_HORA", 0 0, v0x614961261990_0;  1 drivers
+v0x614961260f70_0 .net "MATCH_MIN", 0 0, v0x614961261a60_0;  1 drivers
+v0x614961261080_0 .net "MATCH_SEG", 0 0, v0x614961261b00_0;  1 drivers
+v0x614961261140_0 .net *"_ivl_0", 9 0, L_0x614961261bd0;  1 drivers
+v0x614961261220_0 .net *"_ivl_12", 9 0, L_0x6149612720d0;  1 drivers
+v0x614961261300_0 .net/2u *"_ivl_14", 9 0, L_0x73e2095360a8;  1 drivers
+v0x6149612613e0_0 .net/2u *"_ivl_2", 9 0, L_0x73e209536018;  1 drivers
+v0x6149612614c0_0 .net *"_ivl_6", 9 0, L_0x614961271e70;  1 drivers
+v0x6149612615a0_0 .net/2u *"_ivl_8", 9 0, L_0x73e209536060;  1 drivers
+LS_0x614961261bd0_0_0 .concat [ 1 1 1 1], v0x614961261b00_0, v0x614961261b00_0, v0x614961261b00_0, v0x614961261b00_0;
+LS_0x614961261bd0_0_4 .concat [ 1 1 1 1], v0x614961261b00_0, v0x614961261b00_0, v0x614961261b00_0, v0x614961261b00_0;
+LS_0x614961261bd0_0_8 .concat [ 1 1 0 0], v0x614961261b00_0, v0x614961261b00_0;
+L_0x614961261bd0 .concat [ 4 4 2 0], LS_0x614961261bd0_0_0, LS_0x614961261bd0_0_4, LS_0x614961261bd0_0_8;
+LS_0x614961271e70_0_0 .concat [ 1 1 1 1], v0x614961261990_0, v0x614961261990_0, v0x614961261990_0, v0x614961261990_0;
+LS_0x614961271e70_0_4 .concat [ 1 1 1 1], v0x614961261990_0, v0x614961261990_0, v0x614961261990_0, v0x614961261990_0;
+LS_0x614961271e70_0_8 .concat [ 1 1 0 0], v0x614961261990_0, v0x614961261990_0;
+L_0x614961271e70 .concat [ 4 4 2 0], LS_0x614961271e70_0_0, LS_0x614961271e70_0_4, LS_0x614961271e70_0_8;
+LS_0x6149612720d0_0_0 .concat [ 1 1 1 1], v0x614961261a60_0, v0x614961261a60_0, v0x614961261a60_0, v0x614961261a60_0;
+LS_0x6149612720d0_0_4 .concat [ 1 1 1 1], v0x614961261a60_0, v0x614961261a60_0, v0x614961261a60_0, v0x614961261a60_0;
+LS_0x6149612720d0_0_8 .concat [ 1 1 0 0], v0x614961261a60_0, v0x614961261a60_0;
+L_0x6149612720d0 .concat [ 4 4 2 0], LS_0x6149612720d0_0_0, LS_0x6149612720d0_0_4, LS_0x6149612720d0_0_8;
+    .scope S_0x614961247a70;
+T_0 ;
+    %vpi_call 2 24 "$dumpfile", "sim_rgb.vcd" {0 0 0};
+    %vpi_call 2 25 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x614961247a70 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x614961261b00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x614961261a60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x614961261990_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 32 "$display", "Apagados: R=%b G=%b B=%b", v0x6149612618c0_0, v0x614961261820_0, v0x614961261740_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261b00_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 37 "$display", "Segundos: R=%b G=%b B=%b", v0x6149612618c0_0, v0x614961261820_0, v0x614961261740_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x614961261b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261a60_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 43 "$display", "Minutos: R=%b G=%b B=%b", v0x6149612618c0_0, v0x614961261820_0, v0x614961261740_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x614961261a60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261990_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 49 "$display", "Horas: R=%b G=%b B=%b", v0x6149612618c0_0, v0x614961261820_0, v0x614961261740_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261a60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x614961261990_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 56 "$display", "Coincidencia: R=%b G=%b B=%b", v0x6149612618c0_0, v0x614961261820_0, v0x614961261740_0 {0 0 0};
+    %vpi_call 2 59 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_generador_manecillas_rgb.v";
+    "generador_manecillas_rgb.v";
