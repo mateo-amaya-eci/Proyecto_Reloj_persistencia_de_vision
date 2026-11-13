@@ -1,53 +1,53 @@
+
 module medidor_periodo_efecto_hall (
-    input wire clk,                    
-    input wire rst,                    
-    input wire sensoreh,        // Señal directa proveniente del sensor de efecto Hall
-    output reg [19:0] periodo_total    // Salida con el número total de ciclos que dura la vuelta completa
+    input  wire clk,
+    input  wire rst,
+    input  wire sensoreh,
+    output reg [31:0] periodo_total,
+    output wire inicio_vuelta,
+    output reg periodo_valido
 );
 
-    // Flip-flops encadenados para evitar rebotes del sensor Hall
-    reg ff_eh, sync_eh;
-    
+    reg ff1, ff2, anterior;
+    reg [31:0] contador;
+    reg primera_vuelta;
+
+    // Sincronizar sensor Hall
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            ff_eh  <= 1'b0;
-            sync_eh <= 1'b0;
+            ff1 <= 0;
+            ff2 <= 0;
+            anterior <= 0;
         end else begin
-            ff_eh  <= sensoreh;
-            sync_eh <= ff_eh; 
+            ff1 <= sensoreh;
+            ff2 <= ff1;
+            anterior <= ff2;
         end
     end
 
-    // Detección de flanco de subida del sensor Hall (inicio de nueva vuelta)
-    reg anterior_eh;
-    always @(posedge clk or posedge rst) begin
-        if (rst)
-            anterior_eh <= 1'b0;
-        else
-            anterior_eh <= sync_eh;
-    end
-    
-    wire flanco_hall = sync_eh & ~anterior_eh;
+    assign inicio_vuelta = ff2 & ~anterior;
 
-    // CONTADOR DE CICLOS (Mide el tiempo entre vuelta y vuelta)
-    reg [19:0] contador_maestro;
-
+    // Medir ciclos entre dos pulsos Hall
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            contador_maestro <= 20'd0;
-        end else if (flanco_hall) begin
-            contador_maestro <= 20'd1; 
-        end else begin
-            contador_maestro <= contador_maestro + 1'b1; 
+            contador <= 0;
+            periodo_total <= 0;
+            primera_vuelta <= 0;
+            periodo_valido <= 0;
         end
-    end
+        else if (inicio_vuelta) begin
+            contador <= 0;
 
-    // REGISTRO DE CAPTURA DEL PERIODO (Guarda el resultado al completar la vuelta)
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
-            periodo_total <= 20'd0;
-        end else if (flanco_hall) begin
-            periodo_total <= contador_maestro;
+            if (primera_vuelta) begin
+                periodo_total <= contador + 1'b1;
+                periodo_valido <= 1;
+            end
+
+            primera_vuelta <= 1;
+        end
+        else if (primera_vuelta) begin
+            if (contador != 32'hFFFFFFFF)
+                contador <= contador + 1'b1;
         end
     end
 
@@ -55,26 +55,42 @@ endmodule
 
 
 module generador_pulso_paso (
-    input wire clk,                  
-    input wire rst,                    
-    input wire [11:0] periodo_paso,    // El valor límite (Periodo Paso)
-    output reg tick_1_4                // El pulso de salida de cada 1.4°
+    input wire clk,
+    input wire rst,
+    input wire inicio_vuelta,
+    input wire periodo_valido,
+    input wire [31:0] periodo_paso,
+    output reg tick_1_4
 );
 
-    reg [11:0] contador;
+    reg [31:0] contador;
+    reg [7:0] sectores_emitidos;
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            contador <= 12'd0;
-            tick_1_4 <= 1'b0;
-        end else begin
-            // Comparador (=): ¿El contador llegó al valor del periodo de paso?
-            if (contador >= periodo_paso) begin
-                contador <= 12'd0;    // Se reinicia a 0 
-                tick_1_4 <= 1'b1;    // Activa el pulso de salida por un ciclo de reloj
-            end else begin
-                contador <= contador + 1'b1; // Sigue sumando ciclos del reloj maestro
-                tick_1_4 <= 1'b0;    // Mantiene el pulso apagado el resto del tiempo
+            contador <= 0;
+            sectores_emitidos <= 0;
+            tick_1_4 <= 0;
+        end
+        else begin
+            tick_1_4 <= 0;
+
+            if (inicio_vuelta) begin
+                contador <= 0;
+                sectores_emitidos <= 0;
+            end
+            else if (periodo_valido &&
+                     periodo_paso != 0 &&
+                     sectores_emitidos < 8'd255) begin
+
+                if (contador >= periodo_paso - 1'b1) begin
+                    contador <= 0;
+                    tick_1_4 <= 1;
+                    sectores_emitidos <= sectores_emitidos + 1'b1;
+                end
+                else begin
+                    contador <= contador + 1'b1;
+                end
             end
         end
     end
@@ -86,24 +102,32 @@ module sistema_hall_top (
     input wire clk,
     input wire rst,
     input wire sensor_eh,
-    output wire tick_1_4
+    output wire tick_1_4,
+    output wire inicio_vuelta
 );
 
-    wire [19:0] periodo_total;
+    wire [31:0] periodo_total;
+    wire periodo_valido;
+    wire [31:0] periodo_paso;
 
-    // Instancia del módulo medidor de periodo al dar la vuelta
     medidor_periodo_efecto_hall medidor (
         .clk(clk),
         .rst(rst),
         .sensoreh(sensor_eh),
-        .periodo_total(periodo_total)
+        .periodo_total(periodo_total),
+        .inicio_vuelta(inicio_vuelta),
+        .periodo_valido(periodo_valido)
     );
 
-    // Instancia del módulo generador de pulso por paso (División por 256 mediante shift [19:8])
+    // Dividir el periodo entre 256
+    assign periodo_paso = periodo_total >> 8;
+
     generador_pulso_paso generador (
         .clk(clk),
         .rst(rst),
-        .periodo_paso(periodo_total[19:8]), 
+        .inicio_vuelta(inicio_vuelta),
+        .periodo_valido(periodo_valido),
+        .periodo_paso(periodo_paso),
         .tick_1_4(tick_1_4)
     );
 
