@@ -29,21 +29,13 @@ module contador_angular (
 
             // MUX 2: seleccion de reinicio
             if (tick_1_4 && fin_conteo) begin
-
                 contador_angular <= 8'd0;
-
             end
-
             else if (tick_1_4) begin
-
                 contador_angular <= suma;
-
             end
-
             else begin
-
                 contador_angular <= contador_angular;
-
             end
 
         end
