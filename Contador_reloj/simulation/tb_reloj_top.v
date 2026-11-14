@@ -1,6 +1,6 @@
 
 `timescale 1ns / 1ps
-
+// test bench para el modulo reloj_top generado por inteligencia artificial 
 module tb_reloj_top;
 
     // --------------------------------
@@ -24,7 +24,7 @@ module tb_reloj_top;
     // Salidas del reloj
     wire [5:0] segundos;
     wire [5:0] minutos;
-    wire [4:0] horas;
+    wire [4:0] horas_visualizacion;
     wire [4:0] dia;
     wire [2:0] semana;
     wire [3:0] mes;
@@ -54,7 +54,7 @@ module tb_reloj_top;
         // Salidas
         .segundos(segundos),
         .minutos(minutos),
-        .horas(horas),
+        .horas_visualizacion(horas_visualizacion),
         .dia(dia),
         .semana(semana),
         .mes(mes),
@@ -74,20 +74,23 @@ module tb_reloj_top;
     // --------------------------------
 
     initial begin
-        $monitor(
-            "Tiempo=%0t | tick=%b | Hora=%0d:%0d:%0d | Fecha=%0d/%0d/%0d | Semana=%0d",
-            $time,
-            uut.tick_1s,
-            horas,
-            minutos,
-            segundos,
-            dia,
-            mes,
-            anio,
-            semana
-        );
-    end
-
+    $monitor(
+    "t=%0t | tick_1s=%b | tick_seg=%b | tick_min=%b | tick_dia=%b | load=%b | Hora=%0d:%0d:%0d | Fecha=%0d/%0d/%0d | Semana=%0d",
+    $time,
+    uut.tick_1s,
+    uut.tick_seg,
+    uut.tick_min,
+    uut.tick_dia,
+    uut.load_inicial,
+    uut.horas,
+    minutos,
+    segundos,
+    dia,
+    mes,
+    anio,
+    semana
+);
+end
 
     // --------------------------------
     // 5. ESPERAR UN TICK DE SEGUNDO
@@ -154,8 +157,11 @@ module tb_reloj_top;
         $display(" VERIFICACION DE CARGA INICIAL");
         $display("--------------------------------");
 
-        $display("Hora: %0d:%0d:%0d",
-            horas, minutos, segundos);
+        $display("Hora 24h: %0d:%0d:%0d",
+    uut.horas, minutos, segundos);
+
+$display("Hora 12h: %0d:%0d:%0d",
+    horas_visualizacion, minutos, segundos);
 
         $display("Fecha: %0d/%0d/%0d",
             dia, mes, anio);
@@ -175,17 +181,17 @@ module tb_reloj_top;
         esperar_segundo;
 
         $display("Segundo 1: %0d:%0d:%0d",
-            horas, minutos, segundos);
+            uut.horas, minutos, segundos);
 
         esperar_segundo;
 
         $display("Segundo 2: %0d:%0d:%0d",
-            horas, minutos, segundos);
+            uut.horas, minutos, segundos);
 
         esperar_segundo;
 
         $display("Segundo 3: %0d:%0d:%0d",
-            horas, minutos, segundos);
+            uut.horas, minutos, segundos);
 
 
         // --------------------------------
@@ -196,31 +202,24 @@ module tb_reloj_top;
         $display("--------------------------------");
         $display(" RESULTADO FINAL");
         $display("--------------------------------");
+if (segundos == 1 &&
+    minutos == 0 &&
+    uut.horas == 0 &&
+    horas_visualizacion == 12 &&
+    
+    dia == 1 &&
+    mes == 1 &&
+    anio == 25 &&
+    semana == 1) begin
 
-        if (segundos == 1 &&
-            minutos == 0 &&
-            horas == 0 &&
-            dia == 1 &&
-            mes == 1 &&
-            anio == 25 &&
-            semana == 1) begin
+    $display("PRUEBA SUPERADA");
+    $display("Cambio de ano.");
 
-            $display("PRUEBA SUPERADA");
-            $display("Cambio de ano y calendario correcto.");
+end else begin
 
-        end else begin
+    $display("ERROR EN LA SIMULACION");
 
-            $display("ERROR EN LA SIMULACION");
-
-            $display("Hora: %0d:%0d:%0d",
-                horas, minutos, segundos);
-
-            $display("Fecha: %0d/%0d/%0d",
-                dia, mes, anio);
-
-            $display("Semana: %0d", semana);
-
-        end
+end
 
         #20;
         $finish;

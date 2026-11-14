@@ -1,3 +1,7 @@
+//----------------------------------------------------------------
+ // Controlador del calendario.
+ // Codigo generado por  Mateo Amaya con ayudas de la IA, esquematizado por Mateo Amaya.
+ //----------------------------------------------------------------
 
 module control_calendario (
     input wire clk,
@@ -11,90 +15,97 @@ module control_calendario (
     input wire [3:0] dato_mes,
     input wire [6:0] dato_anio,
 
-    output reg [4:0] dia,
-    output reg [2:0] semana,
-    output reg [3:0] mes,
-    output reg [6:0] anio
+    output wire [4:0] dia,
+    output wire [2:0] semana,
+    output wire [3:0] mes,
+    output wire [6:0] anio
 );
 
-    // Para el intervalo 2000-2099,
-    // un año es bisiesto si es divisible entre 4.
-    wire es_bisiesto;
-    assign es_bisiesto = (anio[1:0] == 2'b00);
 
-    // Cantidad de días del mes actual.
-    reg [5:0] dias_del_mes;
 
-    always @(*) begin
-        case (mes)
-            4'd1, 4'd3, 4'd5, 4'd7,
-            4'd8, 4'd10, 4'd12:
-                dias_del_mes = 6'd31;
+    wire tick_mes;
+    wire tick_anio;
 
-            4'd4, 4'd6, 4'd9, 4'd11:
-                dias_del_mes = 6'd30;
 
-            4'd2: begin
-                if (es_bisiesto)
-                    dias_del_mes = 6'd29;
-                else
-                    dias_del_mes = 6'd28;
-            end
+    // -----------------------------------------
+    // CONTADOR DEL DIA
+    // -----------------------------------------
 
-            default:
-                dias_del_mes = 6'd31;
-        endcase
-    end
+    contador_dia U_DIA (
 
-    // Actualización de la fecha.
-    always @(posedge clk or posedge reset) begin
+        .clk(clk),
+        .reset(reset),
 
-        if (reset) begin
-            dia     <= 5'd1;
-            semana  <= 3'd1;
-            mes     <= 4'd1;
-            anio    <= 7'd0;
-        end
+        .load(load_inicial),
+        .tick(tick_dia),
 
-        else if (load_inicial) begin
-            dia     <= dato_dia;
-            semana  <= dato_semana;
-            mes     <= dato_mes;
-            anio    <= dato_anio;
-        end
+        .dato_inicial(dato_dia),
+        .mes(mes),
+        .anio(anio),
 
-        else if (tick_dia) begin
+        .dia(dia),
+        .tick_out(tick_mes)
 
-            // Actualización del día de la semana.
-            if (semana == 3'd7)
-                semana <= 3'd1;
-            else
-                semana <= semana + 1'b1;
+    );
 
-            // Actualización del día del mes.
-            if (dia < dias_del_mes) begin
-                dia <= dia + 1'b1;
-            end
 
-            else begin
-                dia <= 5'd1;
+    // -----------------------------------------
+    // CONTADOR DE SEMANA
+    // -----------------------------------------
 
-                // Cambio de mes.
-                if (mes < 4'd12) begin
-                    mes <= mes + 1'b1;
-                end
+    contador_semana U_SEMANA (
 
-                else begin
-                    mes <= 4'd1;
+        .clk(clk),
+        .reset(reset),
 
-                    // Cambio de año.
-                    if (anio < 7'd99)
-                        anio <= anio + 1'b1;
-                    else
-                        anio <= 7'd0;
-                end
-            end
-        end
-    end
+        .load(load_inicial),
+        .tick(tick_dia),
+
+        .dato_inicial(dato_semana),
+
+        .semana(semana),
+        .tick_out()
+
+    );
+
+
+    // -----------------------------------------
+    // CONTADOR DEL MES
+    // -----------------------------------------
+
+    contador_mes U_MES (
+
+        .clk(clk),
+        .reset(reset),
+
+        .load(load_inicial),
+        .tick(tick_mes),
+
+        .dato_inicial(dato_mes),
+
+        .mes(mes),
+        .tick_out(tick_anio)
+
+    );
+
+
+    // -----------------------------------------
+    // CONTADOR DEL AÑO
+    // -----------------------------------------
+
+    contador_anio U_ANIO (
+
+        .clk(clk),
+        .reset(reset),
+
+        .load(load_inicial),
+        .tick(tick_anio),
+
+        .dato_inicial(dato_anio),
+
+        .anio(anio),
+        .tick_out()
+
+    );
 
 endmodule

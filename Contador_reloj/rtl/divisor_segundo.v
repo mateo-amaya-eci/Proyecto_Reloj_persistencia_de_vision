@@ -1,3 +1,7 @@
+// ----------------------------------------------------------------
+// Divisor de frecuencia para generar un pulso cada segundo.
+// Codigo generado por  IA basado en los esquematicos diseñados por Paula Morales.
+//----------------------------------------------------------------
 module divisor_segundo #(
     parameter CLK_FREQ = 27000000
 )(

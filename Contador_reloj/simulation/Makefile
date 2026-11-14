@@ -1,3 +1,8 @@
+
+#---------------------------------------------------------------
+# Makefile para simular el reloj digital.
+# codigo generado por  IA .
+#---------------------------------------------------------------
 COMPILER = iverilog
 SIMULATOR = vvp
 VIEWER = gtkwave
@@ -8,6 +13,11 @@ SRC = $(RTL)/reloj_top.v \
       $(RTL)/bcd_a_binario.v \
       $(RTL)/contador_generico.v \
       $(RTL)/divisor_segundo.v \
+      $(RTL)/contador_calendario.v \
+      $(RTL)/contador_dia.v \
+      $(RTL)/contador_semana.v \
+      $(RTL)/contador_mes.v \
+      $(RTL)/contador_anio.v \
       $(RTL)/control_calendario.v
 
 TB = tb_reloj_top.v

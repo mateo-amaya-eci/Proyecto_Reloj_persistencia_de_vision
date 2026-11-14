@@ -1,3 +1,8 @@
+// ----------------------------------------------------------------
+// Top del reloj, que integra todos los modulos.
+// Codigo generado por  IA .
+// ----------------------------------------------------------------
+
 module reloj_top #(
     parameter CLK_FREQ = 27000000
 )(
@@ -18,7 +23,7 @@ module reloj_top #(
     // Salidas del reloj
     output wire [5:0] segundos,
     output wire [5:0] minutos,
-    output wire [4:0] horas,
+    output wire [4:0] horas_visualizacion,
     output wire [4:0] dia,
     output wire [2:0] semana,
     output wire [3:0] mes,
@@ -40,7 +45,7 @@ wire tick_1s;
 
 
 
-
+wire [4:0] horas;
 wire load_inicial;
 // Datos iniciales provenientes del DS1302,
 // después de la conversión BCD a binario
@@ -97,7 +102,7 @@ assign tick_seg = fin_segundos;
 assign tick_min = fin_minutos;
 assign tick_dia = fin_horas;
 
-
+ 
 
 
 
@@ -154,7 +159,13 @@ contador_generico #(
     .output_carry()
 );
 
+wire pm;
 
+conversor_24h_a_12h conversor_horas (
+    .horas_24(horas),
+    .horas_12(horas_visualizacion),
+    .pm(pm)
+);
 
 
 // Datos iniciales convertidos a binario
@@ -220,4 +231,32 @@ assign dato_dia     = dia_inicial;
 assign dato_semana  = semana_inicial;
 assign dato_mes     = mes_inicial;
 assign dato_anio    = anio_inicial;
+endmodule
+
+module conversor_24h_a_12h (
+    input  wire [4:0] horas_24,
+    output wire [4:0] horas_12,
+    output wire pm
+);
+
+    wire es_cero;
+    wire es_mayor_12;
+
+    wire [4:0] horas_reducidas;
+
+    assign es_cero      = (horas_24 == 5'd0);
+    assign es_mayor_12  = (horas_24 > 5'd12);
+
+    // Restador de 12
+    assign horas_reducidas = horas_24 - 5'd12;
+
+    // Selección combinacional
+    assign horas_12 =
+        es_cero     ? 5'd12 :
+        es_mayor_12 ? horas_reducidas :
+                      horas_24;
+
+    // Indicador AM/PM
+    assign pm = (horas_24 >= 5'd12);
+
 endmodule
