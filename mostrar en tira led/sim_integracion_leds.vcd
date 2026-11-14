@@ -1,0 +1,187 @@
+$date
+	Thu Nov 12 22:16:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_integracion_leds $end
+$var wire 10 ! led_r [9:0] $end
+$var wire 10 " led_g [9:0] $end
+$var wire 4 # led_caratula [3:0] $end
+$var wire 10 $ led_b [9:0] $end
+$var reg 8 % angulo_actual [7:0] $end
+$var reg 8 & angulo_hora [7:0] $end
+$var reg 8 ' angulo_min [7:0] $end
+$var reg 8 ( angulo_seg [7:0] $end
+$var integer 32 ) errores [31:0] $end
+$scope module dut $end
+$var wire 8 * angulo_actual [7:0] $end
+$var wire 8 + angulo_hora [7:0] $end
+$var wire 8 , angulo_min [7:0] $end
+$var wire 8 - angulo_seg [7:0] $end
+$var wire 1 . match_seg $end
+$var wire 1 / match_min $end
+$var wire 1 0 match_hor $end
+$var wire 10 1 led_r [9:0] $end
+$var wire 10 2 led_g [9:0] $end
+$var wire 4 3 led_caratula [3:0] $end
+$var wire 10 4 led_b [9:0] $end
+$scope module caratula $end
+$var wire 8 5 dir_angulo [7:0] $end
+$var reg 4 6 caratula_out [3:0] $end
+$upscope $end
+$scope module comparadores $end
+$var wire 8 7 contador_angular [7:0] $end
+$var wire 8 8 converhor [7:0] $end
+$var wire 8 9 convermin [7:0] $end
+$var wire 8 : converseg [7:0] $end
+$var wire 1 . match_seg $end
+$var wire 1 / match_min $end
+$var wire 1 0 match_hor $end
+$scope module comp_h $end
+$var wire 8 ; contador_angular [7:0] $end
+$var wire 8 < converhor [7:0] $end
+$var wire 1 0 match_hor $end
+$upscope $end
+$scope module comp_m $end
+$var wire 8 = contador_angular [7:0] $end
+$var wire 8 > convermin [7:0] $end
+$var wire 1 / match_min $end
+$upscope $end
+$scope module comp_s $end
+$var wire 8 ? contador_angular [7:0] $end
+$var wire 8 @ converseg [7:0] $end
+$var wire 1 . match_seg $end
+$upscope $end
+$upscope $end
+$scope module manecillas $end
+$var wire 10 A LED_B [9:0] $end
+$var wire 10 B LED_G [9:0] $end
+$var wire 10 C LED_R [9:0] $end
+$var wire 1 0 MATCH_HORA $end
+$var wire 1 / MATCH_MIN $end
+$var wire 1 . MATCH_SEG $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111111111 C
+b0 B
+b0 A
+b1000000 @
+b1000000 ?
+b10000000 >
+b1000000 =
+b11000000 <
+b1000000 ;
+b1000000 :
+b10000000 9
+b11000000 8
+b1000000 7
+b1111 6
+b1000000 5
+b0 4
+b1111 3
+b0 2
+b1111111111 1
+00
+0/
+1.
+b1000000 -
+b10000000 ,
+b11000000 +
+b1000000 *
+b0 )
+b1000000 (
+b10000000 '
+b11000000 &
+b1000000 %
+b0 $
+b1111 #
+b0 "
+b1111111111 !
+$end
+#10000
+b11111111 $
+b11111111 4
+b11111111 A
+b0 !
+b0 1
+b0 C
+1/
+0.
+b10000000 %
+b10000000 *
+b10000000 5
+b10000000 7
+b10000000 ;
+b10000000 =
+b10000000 ?
+#20000
+b11111 "
+b11111 2
+b11111 B
+b0 $
+b0 4
+b0 A
+10
+0/
+b11000000 %
+b11000000 *
+b11000000 5
+b11000000 7
+b11000000 ;
+b11000000 =
+b11000000 ?
+#30000
+b0 "
+b0 2
+b0 B
+b1000 #
+b1000 3
+b1000 6
+00
+b1010 %
+b1010 *
+b1010 5
+b1010 7
+b1010 ;
+b1010 =
+b1010 ?
+#40000
+b11111 "
+b11111 2
+b11111 B
+b11111111 $
+b11111111 4
+b11111111 A
+b1111111111 !
+b1111111111 1
+b1111111111 C
+b1111 #
+b1111 3
+b1111 6
+10
+1/
+1.
+b1000000 %
+b1000000 *
+b1000000 5
+b1000000 7
+b1000000 ;
+b1000000 =
+b1000000 ?
+b1000000 &
+b1000000 +
+b1000000 8
+b1000000 <
+b1000000 '
+b1000000 ,
+b1000000 9
+b1000000 >
+#50000
