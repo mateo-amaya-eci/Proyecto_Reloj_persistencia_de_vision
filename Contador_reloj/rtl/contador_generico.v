@@ -1,4 +1,7 @@
-
+//----------------------------------------------------------------
+ // Contador generico.
+ // Codigo generado por  IA basado en los esquematicos diseñados por Paula Morales.
+ //----------------------------------------------------------------
 module contador_generico #(
     parameter WIDTH = 6,
     parameter RESET_VAL = 0
