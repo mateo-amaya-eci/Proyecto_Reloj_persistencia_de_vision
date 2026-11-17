@@ -1,0 +1,837 @@
+$date
+	Tue Nov 17 03:25:05 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_top_hora_angulos $end
+$var wire 14 ! rom_s [13:0] $end
+$var wire 14 " rom_m [13:0] $end
+$var wire 12 # rom_h [11:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$var reg 8 & rtc_day [7:0] $end
+$var reg 8 ' rtc_hours [7:0] $end
+$var reg 8 ( rtc_minutes [7:0] $end
+$var reg 8 ) rtc_month [7:0] $end
+$var reg 8 * rtc_seconds [7:0] $end
+$var reg 1 + rtc_valid $end
+$var reg 8 , rtc_weekday [7:0] $end
+$var reg 8 - rtc_year [7:0] $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var wire 8 . rtc_day [7:0] $end
+$var wire 8 / rtc_hours [7:0] $end
+$var wire 8 0 rtc_minutes [7:0] $end
+$var wire 8 1 rtc_month [7:0] $end
+$var wire 8 2 rtc_seconds [7:0] $end
+$var wire 1 + rtc_valid $end
+$var wire 8 3 rtc_weekday [7:0] $end
+$var wire 8 4 rtc_year [7:0] $end
+$var wire 6 5 segundos [5:0] $end
+$var wire 14 6 rom_s [13:0] $end
+$var wire 14 7 rom_m [13:0] $end
+$var wire 12 8 rom_h [11:0] $end
+$var wire 6 9 minutos [5:0] $end
+$var wire 5 : horas_visualizacion [4:0] $end
+$scope module conv_h $end
+$var wire 4 ; salida_h [3:0] $end
+$var wire 12 < rom_h [11:0] $end
+$var wire 12 = bus_sum [11:0] $end
+$var wire 12 > bus_shift [11:0] $end
+$upscope $end
+$scope module conv_m $end
+$var wire 6 ? salida_m [5:0] $end
+$var wire 14 @ rom_m [13:0] $end
+$var wire 14 A bus_sum [13:0] $end
+$var wire 14 B bus_shift [13:0] $end
+$upscope $end
+$scope module conv_s $end
+$var wire 6 C salida_s [5:0] $end
+$var wire 14 D rom_s [13:0] $end
+$var wire 14 E bus_sum [13:0] $end
+$var wire 14 F bus_shift [13:0] $end
+$upscope $end
+$scope module reloj $end
+$var wire 1 $ clk $end
+$var wire 7 G dato_anio [6:0] $end
+$var wire 5 H dato_dia [4:0] $end
+$var wire 5 I dato_horas [4:0] $end
+$var wire 4 J dato_mes [3:0] $end
+$var wire 6 K dato_minutos [5:0] $end
+$var wire 6 L dato_segundos [5:0] $end
+$var wire 3 M dato_semana [2:0] $end
+$var wire 1 N fin_horas $end
+$var wire 1 O fin_minutos $end
+$var wire 1 P fin_segundos $end
+$var wire 1 Q load_horas $end
+$var wire 1 R load_inicial $end
+$var wire 1 S load_minutos $end
+$var wire 1 T load_segundos $end
+$var wire 1 % reset $end
+$var wire 8 U rtc_day [7:0] $end
+$var wire 8 V rtc_hours [7:0] $end
+$var wire 8 W rtc_minutes [7:0] $end
+$var wire 8 X rtc_month [7:0] $end
+$var wire 8 Y rtc_seconds [7:0] $end
+$var wire 1 + rtc_valid $end
+$var wire 8 Z rtc_weekday [7:0] $end
+$var wire 8 [ rtc_year [7:0] $end
+$var wire 1 \ tick_dia $end
+$var wire 1 ] tick_min $end
+$var wire 1 ^ tick_seg $end
+$var wire 1 _ tick_1s $end
+$var wire 3 ` semana_inicial [2:0] $end
+$var wire 3 a semana [2:0] $end
+$var wire 6 b segundos_inicial [5:0] $end
+$var wire 6 c segundos [5:0] $end
+$var wire 1 d pm $end
+$var wire 6 e minutos_inicial [5:0] $end
+$var wire 6 f minutos [5:0] $end
+$var wire 4 g mes_inicial [3:0] $end
+$var wire 4 h mes [3:0] $end
+$var wire 5 i horas_visualizacion [4:0] $end
+$var wire 5 j horas_inicial [4:0] $end
+$var wire 5 k horas [4:0] $end
+$var wire 5 l dia_inicial [4:0] $end
+$var wire 5 m dia [4:0] $end
+$var wire 7 n anio_inicial [6:0] $end
+$var wire 7 o anio [6:0] $end
+$var reg 1 p rtc_valid_anterior $end
+$scope module calendario_inst $end
+$var wire 1 $ clk $end
+$var wire 7 q dato_anio [6:0] $end
+$var wire 5 r dato_dia [4:0] $end
+$var wire 4 s dato_mes [3:0] $end
+$var wire 3 t dato_semana [2:0] $end
+$var wire 1 R load_inicial $end
+$var wire 1 % reset $end
+$var wire 1 \ tick_dia $end
+$var wire 1 u tick_mes $end
+$var wire 1 v tick_anio $end
+$var wire 3 w semana [2:0] $end
+$var wire 4 x mes [3:0] $end
+$var wire 5 y dia [4:0] $end
+$var wire 7 z anio [6:0] $end
+$scope module U_ANIO $end
+$var wire 1 $ clk $end
+$var wire 7 { dato_inicial [6:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 | tick_out $end
+$var wire 1 v tick $end
+$var wire 7 } anio [6:0] $end
+$scope module contador_anio_inst $end
+$var wire 1 $ clk $end
+$var wire 7 ~ d_inicial [6:0] $end
+$var wire 7 !" dato [6:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 | tick_out $end
+$var wire 7 "" valor_lim [6:0] $end
+$var wire 1 v tick $end
+$var wire 7 #" suma [6:0] $end
+$var wire 7 $" mux_tick [6:0] $end
+$var wire 7 %" mux_load [6:0] $end
+$var wire 7 &" mux_limite [6:0] $end
+$var wire 1 '" fin_conteo $end
+$var reg 7 (" dato_reg [6:0] $end
+$upscope $end
+$upscope $end
+$scope module U_DIA $end
+$var wire 7 )" anio [6:0] $end
+$var wire 1 $ clk $end
+$var wire 5 *" dato_inicial [4:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 \ tick $end
+$var wire 1 u tick_out $end
+$var wire 4 +" mes [3:0] $end
+$var wire 1 ," es_bisiesto $end
+$var wire 5 -" dia [4:0] $end
+$var reg 6 ." dias_del_mes [5:0] $end
+$scope module contador_dia_inst $end
+$var wire 1 $ clk $end
+$var wire 5 /" d_inicial [4:0] $end
+$var wire 5 0" dato [4:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 \ tick $end
+$var wire 1 u tick_out $end
+$var wire 5 1" valor_lim [4:0] $end
+$var wire 5 2" suma [4:0] $end
+$var wire 5 3" mux_tick [4:0] $end
+$var wire 5 4" mux_load [4:0] $end
+$var wire 5 5" mux_limite [4:0] $end
+$var wire 1 6" fin_conteo $end
+$var reg 5 7" dato_reg [4:0] $end
+$upscope $end
+$upscope $end
+$scope module U_MES $end
+$var wire 1 $ clk $end
+$var wire 4 8" dato_inicial [3:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 u tick $end
+$var wire 1 v tick_out $end
+$var wire 4 9" mes [3:0] $end
+$scope module contador_mes_inst $end
+$var wire 1 $ clk $end
+$var wire 4 :" d_inicial [3:0] $end
+$var wire 4 ;" dato [3:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 u tick $end
+$var wire 1 v tick_out $end
+$var wire 4 <" valor_lim [3:0] $end
+$var wire 4 =" suma [3:0] $end
+$var wire 4 >" mux_tick [3:0] $end
+$var wire 4 ?" mux_load [3:0] $end
+$var wire 4 @" mux_limite [3:0] $end
+$var wire 1 A" fin_conteo $end
+$var reg 4 B" dato_reg [3:0] $end
+$upscope $end
+$upscope $end
+$scope module U_SEMANA $end
+$var wire 1 $ clk $end
+$var wire 3 C" dato_inicial [2:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 \ tick $end
+$var wire 1 D" tick_out $end
+$var wire 3 E" semana [2:0] $end
+$scope module contador_semana_inst $end
+$var wire 1 $ clk $end
+$var wire 3 F" d_inicial [2:0] $end
+$var wire 3 G" dato [2:0] $end
+$var wire 1 R load $end
+$var wire 1 % reset $end
+$var wire 1 \ tick $end
+$var wire 1 D" tick_out $end
+$var wire 3 H" valor_lim [2:0] $end
+$var wire 3 I" suma [2:0] $end
+$var wire 3 J" mux_tick [2:0] $end
+$var wire 3 K" mux_load [2:0] $end
+$var wire 3 L" mux_limite [2:0] $end
+$var wire 1 M" fin_conteo $end
+$var reg 3 N" dato_reg [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module contador_horas $end
+$var wire 5 O" D [4:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ] enable $end
+$var wire 1 Q load $end
+$var wire 1 % reset $end
+$var wire 5 P" xor_out [4:0] $end
+$var wire 1 Q" output_carry $end
+$var wire 5 R" d_ff [4:0] $end
+$var wire 5 S" carry [4:0] $end
+$var reg 5 T" Q [4:0] $end
+$scope begin gen_cadena_contador[1] $end
+$upscope $end
+$scope begin gen_cadena_contador[2] $end
+$upscope $end
+$scope begin gen_cadena_contador[3] $end
+$upscope $end
+$scope begin gen_cadena_contador[4] $end
+$upscope $end
+$upscope $end
+$scope module contador_minutos $end
+$var wire 6 U" D [5:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ^ enable $end
+$var wire 1 S load $end
+$var wire 1 % reset $end
+$var wire 6 V" xor_out [5:0] $end
+$var wire 1 W" output_carry $end
+$var wire 6 X" d_ff [5:0] $end
+$var wire 6 Y" carry [5:0] $end
+$var reg 6 Z" Q [5:0] $end
+$scope begin gen_cadena_contador[1] $end
+$upscope $end
+$scope begin gen_cadena_contador[2] $end
+$upscope $end
+$scope begin gen_cadena_contador[3] $end
+$upscope $end
+$scope begin gen_cadena_contador[4] $end
+$upscope $end
+$scope begin gen_cadena_contador[5] $end
+$upscope $end
+$upscope $end
+$scope module contador_segundos $end
+$var wire 6 [" D [5:0] $end
+$var wire 1 $ clk $end
+$var wire 1 T load $end
+$var wire 1 % reset $end
+$var wire 6 \" xor_out [5:0] $end
+$var wire 1 ]" output_carry $end
+$var wire 1 _ enable $end
+$var wire 6 ^" d_ff [5:0] $end
+$var wire 6 _" carry [5:0] $end
+$var reg 6 `" Q [5:0] $end
+$scope begin gen_cadena_contador[1] $end
+$upscope $end
+$scope begin gen_cadena_contador[2] $end
+$upscope $end
+$scope begin gen_cadena_contador[3] $end
+$upscope $end
+$scope begin gen_cadena_contador[4] $end
+$upscope $end
+$scope begin gen_cadena_contador[5] $end
+$upscope $end
+$upscope $end
+$scope module conversor $end
+$var wire 8 a" day_bcd [7:0] $end
+$var wire 8 b" hours_bcd [7:0] $end
+$var wire 8 c" minutes_bcd [7:0] $end
+$var wire 8 d" month_bcd [7:0] $end
+$var wire 8 e" seconds_bcd [7:0] $end
+$var wire 8 f" weekday_bcd [7:0] $end
+$var wire 8 g" year_bcd [7:0] $end
+$var wire 7 h" year_bin [6:0] $end
+$var wire 3 i" weekday_bin [2:0] $end
+$var wire 6 j" seconds_bin [5:0] $end
+$var wire 4 k" month_bin [3:0] $end
+$var wire 6 l" minutes_bin [5:0] $end
+$var wire 5 m" hours_bin [4:0] $end
+$var wire 5 n" day_bin [4:0] $end
+$scope function convertir_bcd $end
+$var reg 8 o" bcd [7:0] $end
+$upscope $end
+$upscope $end
+$scope module conversor_horas $end
+$var wire 5 p" horas_24 [4:0] $end
+$var wire 1 d pm $end
+$var wire 5 q" horas_reducidas [4:0] $end
+$var wire 5 r" horas_12 [4:0] $end
+$var wire 1 s" es_mayor_12 $end
+$var wire 1 t" es_cero $end
+$upscope $end
+$scope module divisor_inst $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var reg 32 u" contador [31:0] $end
+$var reg 1 _ tick_1s $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope task mostrar_hora $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx u"
+xt"
+xs"
+bx r"
+bx q"
+bx p"
+b1011000 o"
+b10001 n"
+b11 m"
+b1111 l"
+b1011 k"
+b111010 j"
+b10 i"
+b11010 h"
+b100110 g"
+b10 f"
+b1011000 e"
+b10001 d"
+b10101 c"
+b11 b"
+b10111 a"
+bx `"
+bx _"
+bx ^"
+x]"
+bx \"
+b0 ["
+bx Z"
+bx Y"
+bx X"
+xW"
+bx V"
+b0 U"
+bx T"
+bx S"
+bx R"
+xQ"
+bx P"
+b0 O"
+bx N"
+xM"
+bx L"
+bx K"
+bx J"
+bx I"
+b111 H"
+bx G"
+b10 F"
+bx E"
+xD"
+b10 C"
+bx B"
+xA"
+bx @"
+bx ?"
+bx >"
+bx ="
+b1100 <"
+bx ;"
+b1011 :"
+bx 9"
+b1011 8"
+bx 7"
+x6"
+bx 5"
+bx 4"
+bx 3"
+bx 2"
+bx 1"
+bx 0"
+b10001 /"
+bx ."
+bx -"
+x,"
+bx +"
+b10001 *"
+bx )"
+bx ("
+x'"
+bx &"
+bx %"
+bx $"
+bx #"
+b1100011 ""
+bx !"
+b11010 ~
+bx }
+x|
+b11010 {
+bx z
+bx y
+bx x
+bx w
+xv
+xu
+b10 t
+b1011 s
+b10001 r
+b11010 q
+xp
+bx o
+b11010 n
+bx m
+b10001 l
+bx k
+b11 j
+bx i
+bx h
+b1011 g
+bx f
+b1111 e
+xd
+bx c
+b111010 b
+bx a
+b10 `
+x_
+x^
+x]
+x\
+b100110 [
+b10 Z
+b1011000 Y
+b10001 X
+b10101 W
+b11 V
+b10111 U
+xT
+xS
+0R
+xQ
+xP
+xO
+xN
+b10 M
+b111010 L
+b1111 K
+b1011 J
+b11 I
+b10001 H
+b11010 G
+bx00000000 F
+bx E
+bx D
+bx C
+bx00000000 B
+bx A
+bx @
+bx ?
+bx00000000 >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+b100110 4
+b10 3
+b1011000 2
+b10001 1
+b10101 0
+b11 /
+b10111 .
+b100110 -
+b10 ,
+0+
+b1011000 *
+b10001 )
+b10101 (
+b11 '
+b10111 &
+1%
+0$
+bx #
+bx "
+bx !
+$end
+#5000
+b0 X"
+b0 R"
+b1 4"
+b1 K"
+b1 ?"
+b0 ^"
+0]"
+0T
+b0 V"
+0W"
+0S
+b0 P"
+0Q"
+0Q
+b1 3"
+b1 J"
+b1 >"
+b0 %"
+0u
+0^
+0P
+b0 Y"
+0]
+0O
+b0 S"
+b100000000 #
+b100000000 8
+b100000000 <
+b110000000110 =
+b110000000000 >
+b1100 ;
+0\
+0N
+b10 5"
+b10 L"
+b10 @"
+b0 $"
+06"
+b11111 1"
+b1 &"
+b0 _"
+b0 \"
+b1100 :
+b1100 i
+b1100 r"
+0D"
+0v
+b11111 ."
+0|
+1,"
+0_
+b0 u"
+b0 !
+b0 6
+b0 D
+b11110 E
+b0 F
+b0 5
+b0 C
+b0 c
+b0 `"
+b0 "
+b0 7
+b0 @
+b11110 A
+b0 B
+b0 9
+b0 ?
+b0 f
+b0 Z"
+1t"
+0s"
+b10100 q"
+0d
+b0 k
+b0 T"
+b0 p"
+b10 2"
+b1 m
+b1 y
+b1 -"
+b1 0"
+b1 7"
+b10 I"
+0M"
+b1 a
+b1 w
+b1 E"
+b1 G"
+b1 N"
+b10 ="
+0A"
+b1 h
+b1 x
+b1 +"
+b1 9"
+b1 ;"
+b1 B"
+b1 #"
+0'"
+b0 o
+b0 z
+b0 }
+b0 !"
+b0 )"
+b0 ("
+0p
+1$
+#10000
+0$
+#15000
+1$
+#20000
+0$
+#25000
+1$
+#30000
+0%
+0$
+#35000
+b1 u"
+1$
+#40000
+b111010 ^"
+b1111 X"
+b11 R"
+1T
+1S
+1Q
+b111010 ["
+b1111 U"
+b11 O"
+b11010 %"
+b10001 4"
+b1011 ?"
+b10 K"
+1R
+1+
+0$
+#45000
+b111010 ^"
+b1111 X"
+b11 R"
+b111010 \"
+b1111 V"
+b11 P"
+b1000000 #
+b1000000 8
+b1000000 <
+b1100000110 =
+b1100000000 >
+b11 ;
+b10010 5"
+b11 L"
+b1100 @"
+b11110 1"
+b11011 &"
+0T
+0S
+0Q
+b0 ["
+b0 U"
+b0 O"
+b11 :
+b11 i
+b11 r"
+b10001 3"
+b10 J"
+b1011 >"
+b11110 ."
+b11010 $"
+0,"
+0R
+b10 u"
+b11110111 !
+b11110111 6
+b11110111 D
+b11101000011110 E
+b11101000000000 F
+b111010 5
+b111010 C
+b111010 c
+b111010 `"
+b1000000 "
+b1000000 7
+b1000000 @
+b111100011110 A
+b111100000000 B
+b1111 9
+b1111 ?
+b1111 f
+b1111 Z"
+0t"
+b10111 q"
+b11 k
+b11 T"
+b11 p"
+b10010 2"
+b10001 m
+b10001 y
+b10001 -"
+b10001 0"
+b10001 7"
+b11 I"
+b10 a
+b10 w
+b10 E"
+b10 G"
+b10 N"
+b1100 ="
+b1011 h
+b1011 x
+b1011 +"
+b1011 9"
+b1011 ;"
+b1011 B"
+b11011 #"
+b11010 o
+b11010 z
+b11010 }
+b11010 !"
+b11010 )"
+b11010 ("
+1p
+1$
+#50000
+0+
+0$
+#55000
+0p
+b11 u"
+1$
+#60000
+0$
+#65000
+b111011 ^"
+b111011 \"
+1_
+b0 u"
+1$
+#70000
+0$
+#75000
+b111011 ^"
+b111011 \"
+b11111100 !
+b11111100 6
+b11111100 D
+b11101100011110 E
+b11101100000000 F
+b111011 5
+b111011 C
+b111011 c
+b111011 `"
+0_
+b1 u"
+1$
+#80000
+0$
+#85000
+b10 u"
+1$
+#90000
+0$
+#95000
+b11 u"
+1$
+#100000
+0$
+#105000
+b10000 X"
+b0 ^"
+1T
+b10000 V"
+b1111 Y"
+1^
+1P
+b11 _"
+b111100 \"
+1_
+b0 u"
+1$
+#110000
+0$
+#115000
+b10000 X"
+b0 ^"
+0T
+b10000 V"
+b0 Y"
+0^
+0P
+b0 _"
+b0 \"
+b1000100 "
+b1000100 7
+b1000100 @
+b1000000011110 A
+b1000000000000 B
+b10000 9
+b10000 ?
+b10000 f
+b10000 Z"
+b0 !
+b0 6
+b0 D
+b11110 E
+b0 F
+b0 5
+b0 C
+b0 c
+b0 `"
+0_
+b1 u"
+1$
+#120000
+0$
+#125000
+b10 u"
+1$
+#130000
+0$
+#135000
+b11 u"
+1$
+#140000
+0$
