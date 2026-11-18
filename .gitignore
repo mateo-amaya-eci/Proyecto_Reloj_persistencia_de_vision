@@ -8,8 +8,7 @@
 *.lxt2
 
 # Ejecutables generados
-*_sim
-sim_*
+
 *.exe
 
 # Archivos temporales
