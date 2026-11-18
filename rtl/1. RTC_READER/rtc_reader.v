@@ -2,7 +2,7 @@
 
 
 module rtc_reader #(
-    parameter integer CLK_FREQ_HZ = 100_000_000,//27_000_000
+    parameter integer CLK_FREQ_HZ = 27_000_000,
     parameter integer START_DELAY_US = 5
 )(
     input wire clk,

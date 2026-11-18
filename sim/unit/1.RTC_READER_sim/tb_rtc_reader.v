@@ -11,7 +11,7 @@ module tb_rtc_reader;
 
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;  // 100 MHz
+        forever #18.5 clk = ~clk;  // 27 MHz
     end
 
     initial begin
@@ -43,7 +43,7 @@ module tb_rtc_reader;
     // =================================================
 
     rtc_reader #(
-        .CLK_FREQ_HZ(100_000_000),
+        .CLK_FREQ_HZ(27_000_000),
         .START_DELAY_US(5)
     ) dut (
         .clk(clk),

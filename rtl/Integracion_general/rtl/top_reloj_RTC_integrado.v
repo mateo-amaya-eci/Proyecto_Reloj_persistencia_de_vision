@@ -1,6 +1,6 @@
 
 module top_reloj_RTC_integrado #(
-    parameter CLK_FREQ = 100_000_000,
+    parameter CLK_FREQ = 27_000_000,
     parameter START_DELAY_US = 5
 )(
     input wire clk,

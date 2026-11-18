@@ -33,17 +33,17 @@ module tb_top_reloj_RTC_integrado;
     reg prueba_128 = 0;
 
     // =========================================
-    // RELOJ DE 100 MHz
+    // RELOJ DE 27 MHz
     // =========================================
 
-    always #5 clk = ~clk;
+    always #18.5 clk = ~clk;
 
     // =========================================
     // TOP INTEGRADO
     // =========================================
 
     top_reloj_RTC_integrado #(
-        .CLK_FREQ(100_000_000),
+        .CLK_FREQ(27_000_000),
         .START_DELAY_US(5)
     ) dut (
         .clk(clk),

@@ -1,15 +1,13 @@
 `timescale 1ns / 1ps
 module contador_divisor #(
-    parameter integer CLK_FREQ_HZ = 100_000_000 // en la Tang nano 27_000_000
+    parameter integer CLK_FREQ_HZ = 27_000_000
 )(
     input wire clk,
     input wire reset,
     output reg tick_20us
 );
 
-    // 100 MHz / 50 kHz = 2000 ciclos
-    // Cada 2000 ciclos se genera un pulso de 20 us.
-    // 27MHz / 50 kHz = 540 ciclos
+    // 27 MHz / 50 kHz = 540 ciclos.
     // Cada 540 ciclos se genera un pulso de 20 us.
     localparam integer DIVISOR = CLK_FREQ_HZ / 50_000;
 
