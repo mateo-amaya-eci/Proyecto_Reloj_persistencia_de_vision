@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 
 module generador_clk #(
     parameter integer CLK_FREQ_HZ = 100_000_000

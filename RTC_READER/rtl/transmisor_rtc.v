@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module transmisor_rtc (
     input wire clk,
     input wire reset,

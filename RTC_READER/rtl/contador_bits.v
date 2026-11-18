@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 // ============================================================
 // 2. CONTADOR DE BITS
 // Cuenta los 8 bits del comando BF.

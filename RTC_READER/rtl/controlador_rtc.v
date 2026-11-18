@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module controlador_rtc (
 
     input wire clk,

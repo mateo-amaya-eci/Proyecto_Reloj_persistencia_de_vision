@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 // ============================================================
 // 3. CONTADOR DE BYTES
 // Cuenta los 8 bytes del burst read.
