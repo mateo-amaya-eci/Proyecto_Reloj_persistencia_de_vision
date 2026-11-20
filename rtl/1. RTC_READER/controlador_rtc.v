@@ -1,4 +1,10 @@
 `timescale 1ns / 1ps
+// Codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
+//--------------------------------------------------------------------------------
+// Controlador del RTC DS1302
+// Este módulo implementa una máquina de estados finita (FSM) que controla la comunicación con
+// el RTC DS1302. La FSM gestiona la secuencia de transmisión y recepción de datos
+//--------------------------------------------------------------------------------
 module controlador_rtc (
 
     input wire clk,
@@ -26,13 +32,19 @@ module controlador_rtc (
     output wire byte_reset,
     output wire byte_load
 );
+// IDLE es el estado de iniciación
+// START es el estado de estabilizacion de la señal CE y de carga del comando de transmisión (BF)
+// TRANSMIT es el estado de transmisión del comando de transmisión (BF) al DS130
+// RECEIVE es el estado de recepción de los datos del DS1302
+// FINISH es el estado de finalización de la comunicación con el DS1302
+// DONE es el estado de finalización de la comunicación con el DS1302
 
-localparam IDLE     = 3'b000,
-           START    = 3'b001,
-           TRANSMIT = 3'b010,
-           RECEIVE  = 3'b011,
-           FINISH   = 3'b100,
-           DONE     = 3'b101;
+localparam [2:0] IDLE     = 3'b000,
+                 START    = 3'b001,
+                 TRANSMIT = 3'b010,
+                 RECEIVE  = 3'b011,
+                 FINISH   = 3'b100,
+                 DONE     = 3'b101;
 
 reg [2:0] state;
 reg [2:0] next_state;
@@ -60,15 +72,18 @@ always @(*) begin
             next_state = START;
 
         START:
+        // cuando se ha completado el tiempo de espera de 5us, se pasa al estado de transmisión 
             if (start_done)
                 next_state = TRANSMIT;
 
         TRANSMIT:
+        // cuando se han enviado los 8 bits del comando de transmisión (BF), se pasa al estado de recepción
             if (tx_done)
                 next_state = RECEIVE;
 
         RECEIVE:
             if (rx_done)
+        // cuando se han recibido los 8 bytes de datos del DS1302, se pasa al estado de finalización
                 next_state = FINISH;
 
         FINISH:

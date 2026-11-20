@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
-
+// codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
 // ============================================================
-// 4. RECEPTOR SIPO
+// RECEPTOR SIPO
 // Recibe los bits seriales y reconstruye un byte.
 // DS1302 transmite LSB primero.
 // ============================================================
@@ -9,10 +9,14 @@
 module receptor_sipo (
     input wire clk,
     input wire reset,
+    // Señal que indica que se debe capturar el bit de datos entrante, 
+    // en el estado de Receive , solo en el pulso de subida.
     input wire capture_enable,
+    // Señal de datos entrante desde el I/O del DS1302
     input wire dat_in,
 
     output reg [7:0] rx_byte,
+    // Señal que indica que se ha recibido un byte completo
     output reg byte_complete
 );
 
@@ -28,9 +32,9 @@ always @(posedge clk) begin
         byte_complete <= 1'b0;
 
         if (capture_enable) begin
-
+            // coloca el bit  nuevo bit en la posicion mas significativa
             rx_byte <= {dat_in, rx_byte[7:1]};
-
+            // informa que se completo el byte de el SIPO
             if (bit_count == 3'd7) begin
                 bit_count     <= 3'd0;
                 byte_complete <= 1'b1;

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
+//codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
 // ============================================================
-// 2. CONTADOR DE BITS
+//  CONTADOR DE BITS
 // Cuenta los 8 bits del comando BF.
 // ============================================================
 
@@ -24,6 +25,8 @@ always @(posedge clk) begin
 
         if (bit_enable) begin
             if (bit_count == 3'd7) begin
+                // Cuando se han enviado los 8 bits, se reinicia el contador
+                // y se indica que la transmisión ha terminado
                 bit_count <= 3'd0;
                 tx_done   <= 1'b1;
             end

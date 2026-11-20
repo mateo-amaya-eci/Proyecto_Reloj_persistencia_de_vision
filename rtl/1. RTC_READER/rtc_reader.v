@@ -1,5 +1,9 @@
 `timescale 1ns / 1ps
-
+//codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA, pero planteado por Mateo Amaya
+// ============================================================
+//  LECTOR DE RTC DS1302
+// codigo que recibe del modulo RTC DS1302 los datos iniciales de Hora/calendario
+// ============================================================
 
 module rtc_reader #(
     parameter integer CLK_FREQ_HZ = 27_000_000,
@@ -57,17 +61,21 @@ module rtc_reader #(
     wire dat_in;
 
     // =================================================
-    // 2. BUS BIDIRECCIONAL DEL DS1302
+    //  BUS BIDIRECCIONAL DEL DS1302
     // =================================================
+    // tx_oe coontrolado por la mauquina de estados define la señal de salida del bus bidireccional del DS1302, que se activa cuando tx_oe es alto,
+    // y se desactiva cuando tx_oe es bajo. Cuando tx_oe es bajo, el bus se pone en alta impedancia (1'bz), 
+    // lo que permite que el DS1302 pueda enviar datos al microcontrolador.
 
     assign RTC_DAT = tx_oe ? tx_data : 1'bz;
 
     assign dat_in = RTC_DAT;
 
     // =================================================
-    // 3. TEMPORIZADOR DE INICIO
+    //  TEMPORIZADOR DE INICIO
     // =================================================
-
+    // esta configurado para iniciar el conteo en el momento en que se habilita la señal CE del RTC, 
+    // y despues de un tiempo de espera de 5us, se activa la señal start_done para indicar que ya se puede iniciar la transmision de datos al RTC.
     localparam integer START_DELAY_CYCLES =
         (CLK_FREQ_HZ / 1_000_000) * START_DELAY_US;
 
@@ -104,7 +112,7 @@ module rtc_reader #(
     end
 
     // =================================================
-    // 4. GENERADOR DE RELOJ SCLK
+    //  GENERADOR DE RELOJ SCLK
     // =================================================
 
     generador_clk #(
@@ -119,7 +127,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 5. TRANSMISOR DEL COMANDO 8'hBF
+    //  TRANSMISOR DEL COMANDO 8'hBF
     // =================================================
 
     transmisor_rtc transmisor (
@@ -134,7 +142,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 6. RECEPTOR DE DATOS
+    //  RECEPTOR DE DATOS
     // =================================================
 
     receptor_sipo receptor (
@@ -147,7 +155,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 7. CONTADOR DE BYTES
+    //  CONTADOR DE BYTES
     // =================================================
 
     contador_bytes contador_bytes_inst (
@@ -160,7 +168,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 8. BANCO DE REGISTROS
+    //  BANCO DE REGISTROS
     // =================================================
 
     banco_registros_rtc registros (
@@ -180,7 +188,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 9. CONTROLADOR PRINCIPAL
+    //  CONTROLADOR PRINCIPAL
     // =================================================
 
     controlador_rtc controlador (
@@ -211,7 +219,7 @@ module rtc_reader #(
     );
 
     // =================================================
-    // 10. INDICADOR DE LECTURA COMPLETA
+    //  INDICADOR DE LECTURA COMPLETA
     // =================================================
 
     always @(posedge clk) begin

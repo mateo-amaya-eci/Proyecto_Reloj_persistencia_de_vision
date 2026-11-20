@@ -1,7 +1,9 @@
 `timescale 1ns / 1ps
+//--------------------------------------------------------------------------------
+// Proyecto: Reloj con persistencia de vision
+// codigo de union relizado por Mateo  Amaya  y Paula Morales, con ayuda de  herramienta de Inteligencia Artificial "ChatGPT"
+//--------------------------------------------------------------------------------
 
-// Top completo del reloj POV con RTC DS1302, sensor Hall,
-// manecillas RGB, caratula ROM y calendario integrado.
 module top_pov_completo #(
     parameter integer CLK_FREQ_HZ = 27_000_000,
     parameter integer START_DELAY_US = 5
@@ -10,8 +12,10 @@ module top_pov_completo #(
     input  wire reset,       // Reset activo en alto
     input  wire sensor_eh,
 
-    // Conexion fisica al DS1302
-    output wire RTC_CE,
+    // Conexion fisica al  rtc DS1302 para la transimiccion y recepcion 
+    // de datos iniciales del reloj y calendario
+    
+    output wire RTC_CE,// señal de habilitacion del rtc
     output wire RTC_SCLK,
     inout  wire RTC_DAT,
 
@@ -38,6 +42,7 @@ module top_pov_completo #(
     // =========================================================
     // 1. DATOS LEIDOS DEL DS1302
     // =========================================================
+    //En esta etapa se transmite la señal BF ala inout data, para que empiese a enviar los datos 
 
     wire [7:0] rtc_seconds;
     wire [7:0] rtc_minutes;

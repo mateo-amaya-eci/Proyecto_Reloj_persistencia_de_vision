@@ -1,4 +1,9 @@
 `timescale 1ns / 1ps
+// codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
+// ============================================================
+// CONTROL DE FASE
+// Genera la señal de reloj rtc_sclk a partir de la señal tick_20us
+// ============================================================
 
 module control_fase (
     input wire clk,
@@ -10,6 +15,12 @@ module control_fase (
     output reg rise_pulse,
     output reg fall_pulse
 );
+// La señal phase es la señal de reloj rtc_sclk que se genera a partir de la señal tick_20us.
+//........_______........________
+//........|......|......|........
+//........|......|......|........
+//________........_______........
+//......20us....40us.............
 
     always @(posedge clk) begin
         if (reset) begin

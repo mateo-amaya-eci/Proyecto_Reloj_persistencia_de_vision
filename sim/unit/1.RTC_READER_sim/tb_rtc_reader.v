@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+// Testbemch generado con inteligencia artificial ChatGPT
 module tb_rtc_reader;
 
     // =================================================
@@ -74,9 +74,11 @@ module tb_rtc_reader;
     assign RTC_DAT = rtc_drive_en ? rtc_drive : 1'bz;
 
     reg [7:0] command_shift;
+    reg [7:0] command_received;
     integer command_bits;
 
     reg read_mode;
+    reg command_started;
     integer data_bit_index;
 
     // Datos que entregará el RTC:
@@ -90,9 +92,11 @@ module tb_rtc_reader;
         rtc_drive = 0;
 
         command_shift = 0;
+        command_received = 0;
         command_bits = 0;
 
         read_mode = 0;
+        command_started = 0;
         data_bit_index = 0;
 
         burst_data = {
@@ -107,28 +111,34 @@ module tb_rtc_reader;
         };
     end
 
-    // El DS1302 recibe el comando en flancos positivos.
-    always @(posedge RTC_SCLK) begin
-
-        if (RTC_CE && !read_mode) begin
-
-            command_shift <= {
-                RTC_DAT,
-                command_shift[7:1]
-            };
-
-            command_bits <= command_bits + 1;
-
-            if (command_bits == 7) begin
-                read_mode <= 1;
-                data_bit_index <= 0;
-            end
-
-        end
-
+    // La carga del comando ocurre al entrar en START, mientras CE ya está
+    // alto. Muestrea los bits después de que SCLK haya regresado a reposo.
+    always @(posedge RTC_CE) begin
+        command_shift = 0;
+        command_received = 0;
+        command_bits = 0;
+        read_mode = 0;
+        command_started = 0;
+        data_bit_index = 0;
+        #1;
+        command_started = 1;
     end
 
-    // El DS1302 entrega los datos en flancos negativos.
+    always @(posedge RTC_SCLK) begin
+        if (RTC_CE && command_started && !read_mode) begin
+            command_shift = {RTC_DAT, command_shift[7:1]};
+            command_bits = command_bits + 1;
+
+            if (command_bits == 8) begin
+                command_received = command_shift;
+                read_mode = 1;
+                data_bit_index = 0;
+            end
+        end
+    end
+
+    // Tras el octavo flanco ascendente del comando, el RTC pone el primer
+    // bit de datos en DAT. El receptor lo muestrea en el siguiente ascenso.
     always @(negedge RTC_SCLK) begin
 
         if (RTC_CE && read_mode) begin
@@ -187,8 +197,8 @@ module tb_rtc_reader;
         $display("-------------------------------------");
 
         // Comprobar comando enviado.
-        if (command_shift !== 8'hBF)
-            $fatal(1, "ERROR: comando enviado incorrectamente");
+        if (command_received !== 8'hBF)
+            $fatal(1, "ERROR: comando enviado incorrectamente; recibido=%h", command_received);
 
         // Comprobar registros recibidos.
         if (

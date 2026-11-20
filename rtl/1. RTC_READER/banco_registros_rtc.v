@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
-
+// codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
 // ============================================================
-// 5. BANCO DE REGISTROS PIPO
+// BANCO DE REGISTROS PIPO
 // Almacena los 7 bytes útiles del RTC.
 // ============================================================
 
@@ -11,6 +11,7 @@ module banco_registros_rtc (
     input wire byte_load,
 
     input wire [2:0] byte_count,
+    // valor recibido del SIPO, que se carga en el banco de registros cuando byte_load es 1
     input wire [7:0] rx_byte,
 
     output reg [7:0] seconds,
@@ -35,7 +36,7 @@ always @(posedge clk) begin
     end
 
     else if (byte_load) begin
-
+    // demux o decodificador de direcciones, para almacenar cada byte en su registro correspondiente
         case (byte_count)
 
             3'd0: seconds <= rx_byte;
