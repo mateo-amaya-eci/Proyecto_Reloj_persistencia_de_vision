@@ -1,4 +1,5 @@
 
+// Testbench generado por IA
 `timescale 1ns / 1ps
 
 module tb_rom_caratula_256x4;

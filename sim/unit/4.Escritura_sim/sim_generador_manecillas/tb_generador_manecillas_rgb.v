@@ -1,4 +1,4 @@
-
+// testbench generado por IA
 `timescale 1ns/1ps
 
 module tb_generador_manecillas_rgb;

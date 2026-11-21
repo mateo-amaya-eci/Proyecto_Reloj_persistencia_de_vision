@@ -1,4 +1,7 @@
-
+// codigo realizado por Mateo Felipe Amaya , con ayuda de inteligencia artificial ChatGPT
+//--------------------------------------------
+// cosigo para generar el angulo de 0 a 255 , donde cada incremento representa 1,4 grados
+//--------------------------------------------
 module top_angulo (
     input wire clk,
     input wire rst,

@@ -1,3 +1,4 @@
+// TestBench Generado por IA
 `timescale 1ns / 1ps
 
 module tb_comparadores_top;

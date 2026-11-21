@@ -1,16 +1,19 @@
 
 // codigo Generado por Inteligencia Artificial basado en 
 // esquematicos diseñados por Mateo Felipe Amaya
+//--------------------------------------------
+// CONTADOR ANGULAR
+//--------------------------------------------
 
 module contador_angular (
     input wire clk,
     input wire rst,
     input wire tick_1_4,
-
     output reg [7:0] contador_angular
 );
 
     // Sumador: incrementa el valor actual
+    // cuenta cada pulso de 1.4 grados  que representa  cada columna
     wire [7:0] suma;
 
     assign suma = contador_angular + 1'b1;

@@ -1,3 +1,4 @@
+//Testbench generado por IA
 `timescale 1ns / 1ps
 
 module tb_traductores_rom;

@@ -1,4 +1,4 @@
-
+// codigo realizado por Mateo Felipe Amaya , con ayuda de inteligencia artificial ChatGPT
 module medidor_periodo_efecto_hall (
     input  wire clk,
     input  wire rst,
@@ -12,7 +12,8 @@ module medidor_periodo_efecto_hall (
     reg [31:0] contador;
     reg primera_vuelta;
 
-    // Sincronizar sensor Hall
+    // el sensor de efecto hall entra a 2 flip flops en serie para sincronizarlo con el reloj
+    // del sistema y evitar problemas de metastabilidad
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             ff1 <= 0;
@@ -27,7 +28,7 @@ module medidor_periodo_efecto_hall (
 
     assign inicio_vuelta = ff2 & ~anterior;
 
-    // Medir ciclos entre dos pulsos Hall
+    // Medir ciclos entre dos pulsos Hall  
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             contador <= 0;
@@ -52,7 +53,8 @@ module medidor_periodo_efecto_hall (
     end
 
 endmodule
-
+// gnenerar los 255 pulsos por cada periodo de vuelta del motor
+// donde cada pulso representa 1,4 grados 
 
 module generador_pulso_paso (
     input wire clk,
@@ -82,7 +84,7 @@ module generador_pulso_paso (
             else if (periodo_valido &&
                      periodo_paso != 0 &&
                      sectores_emitidos < 8'd255) begin
-
+                // comparar el contador con el periodo paso , generar el pulso de 1.4 grados 
                 if (contador >= periodo_paso - 1'b1) begin
                     contador <= 0;
                     tick_1_4 <= 1;
@@ -109,7 +111,7 @@ module sistema_hall_top (
     wire [31:0] periodo_total;
     wire periodo_valido;
     wire [31:0] periodo_paso;
-
+    // tomar el numero de cilos que genera cada vuelta del motor
     medidor_periodo_efecto_hall medidor (
         .clk(clk),
         .rst(rst),
@@ -121,7 +123,7 @@ module sistema_hall_top (
 
     // Dividir el periodo entre 256
     assign periodo_paso = periodo_total >> 8;
-
+    // con el valor del periodo  paso  gneerar un pul
     generador_pulso_paso generador (
         .clk(clk),
         .rst(rst),

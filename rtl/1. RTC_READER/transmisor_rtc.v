@@ -31,13 +31,13 @@ module transmisor_rtc (
 
     reg [7:0] shift_reg;
     reg load_command_d;
-
+    
     wire load_pulse;
 // Señal load_pulse para detectar el flanco ascendente de la señal 
 //load_command y cargar el comando de transmisión (BF);
 
     assign tx_data = shift_reg[0];
-
+    assign load_pulse = load_command & ~load_command_d;
 
     // REGISTRO DE DESPLAZAMIENTO
 
