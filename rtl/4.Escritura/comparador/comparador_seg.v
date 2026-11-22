@@ -1,7 +1,9 @@
-// ============================================================================
+// --------------------------------------------------------
+// esquematico generador por Paula Morales y codigo con ayuda de IA ChatGPT
+// --------------------------------------------------------
 // MÓDULO: comparador_seg.v
 // Comparador de igualdad de 8 bits para la señal de segundos
-// ============================================================================
+// -------------------------------------------------------
 module comparador_seg (
     input  wire [7:0] converseg,         // Entrada 1: Salida del conversor de segundos (8 bits)
     input  wire [7:0] contador_angular,  // Entrada 2: Contador angular (8 bits)

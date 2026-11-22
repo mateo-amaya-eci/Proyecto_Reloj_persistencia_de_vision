@@ -1,7 +1,9 @@
-// ============================================================================
+// --------------------------------------------------------
+// esquematico generador por Paula Morales y codigo con ayuda de IA ChatGPT
+//--------------------------------------------------------
 // MÓDULO: comparador_min.v
 // Comparador de igualdad de 8 bits para la señal de minutos
-// ============================================================================
+// --------------------------------------------------------
 module comparador_min (
     input  wire [7:0] convermin,         // Salida del conversor de minutos (8 bits)
     input  wire [7:0] contador_angular,  // Contador angular de 8 bits

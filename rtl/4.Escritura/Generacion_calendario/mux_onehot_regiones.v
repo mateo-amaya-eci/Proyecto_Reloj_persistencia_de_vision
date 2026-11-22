@@ -1,4 +1,4 @@
-
+// Codigo generado por Mateo Amaya esquematicos diseñados por Mateo  Amaya
 module mux_onehot_regiones (
 
     // salidas de los decodificadores

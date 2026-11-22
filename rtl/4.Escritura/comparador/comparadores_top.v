@@ -1,7 +1,9 @@
-// ============================================================================
-// MÓDULO TOP: comparadores_top.v
+// --------------------------------------------------------
+// esquematico generador por Paula Morales y codigo con ayuda de IA ChatGPT
+// -------------------------------------------------------- 
+//MÓDULO TOP: comparadores_top.v
 // Integración de los comparadores de Segundos, Minutos y Horas
-// ============================================================================
+// --------------------------------------------------------
 module comparadores_top (
     input  wire [7:0] converseg,         // Entrada desde conversor de segundos (8 bits)
     input  wire [7:0] convermin,         // Entrada desde conversor de minutos (8 bits)

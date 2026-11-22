@@ -1,7 +1,9 @@
-// ============================================================================
+//--------------------------------------------------------------------- 
+//esquema realizado por Paula Morales y codigo generado con ayuda de IA ChatGPT
+// --------------------------------------------------------------------
 // MÓDULO: comparador_hor.v
 // Comparador de igualdad de 8 bits para la señal de horas
-// ============================================================================
+// --------------------------------------------------------------------
 module comparador_hor (
     input  wire [7:0] converhor,         // Salida del conversor de horas (8 bits)
     input  wire [7:0] contador_angular,  // Contador angular de 8 bits

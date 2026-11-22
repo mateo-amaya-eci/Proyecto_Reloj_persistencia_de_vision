@@ -1,4 +1,4 @@
-
+// Codigo generado por Mateo Amaya esquematicos diseñados por Mateo  Amaya
 module etapa_double_dabble (
 
     input wire [7:0] BCD_in,

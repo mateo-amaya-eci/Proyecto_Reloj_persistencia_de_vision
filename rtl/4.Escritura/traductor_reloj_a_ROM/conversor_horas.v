@@ -1,7 +1,9 @@
-// ============================================================================
+//---------------------------------------------------- 
+//esquema generado por Paula Morales, codigo realizado por Paula Morales con ayuda de IA ChatGPT
+// ----------------------------------------------------
 // MoDULO: conversor_horas.v
 // Traduccion de horas (1 a 12) para direccion de ROM
-// ============================================================================
+// ----------------------------------------------------
 module conversor_horas (
     input  wire [3:0]  salida_h,   // Entrada de horas del reloj (4 bits)
     output wire [11:0] rom_h       // Salida hacia ROM (12 bits segun diagrama)

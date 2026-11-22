@@ -1,4 +1,6 @@
+//---------------------------------------------------------------------------------------------------------
 // codigo realizado por Mateo Felipe Amaya , con ayuda de inteligencia artificial ChatGPT
+//---------------------------------------------------------------------------------------------------------
 module medidor_periodo_efecto_hall (
     input  wire clk,
     input  wire rst,

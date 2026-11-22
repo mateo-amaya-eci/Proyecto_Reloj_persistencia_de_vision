@@ -1,4 +1,6 @@
-
+//--------------------------------------
+// visualizacion silueta del reloj 
+//--------------------------------------
 module rom_caratula_256x4 (
     input  wire [7:0] dir_angulo,
     output reg  [3:0] caratula_out

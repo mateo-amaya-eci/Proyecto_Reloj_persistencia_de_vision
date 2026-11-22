@@ -1,4 +1,4 @@
-
+// Codigo generado por Mateo Amaya esquematicos diseñados por Mateo  Amaya
 module decodificador_bcd_3col (
 
     input wire [3:0] bcd,

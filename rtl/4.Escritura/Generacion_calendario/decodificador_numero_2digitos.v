@@ -1,4 +1,4 @@
-
+// Codigo generado por Mateo Amaya esquematicos diseñados por Mateo  Amaya
 module decodificador_numero_2digitos (
 
     input wire [3:0] bcd_dec,

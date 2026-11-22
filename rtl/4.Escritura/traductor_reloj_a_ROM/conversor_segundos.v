@@ -1,7 +1,9 @@
-// ============================================================================
+//---------------------------------------------------- 
+//esquema generado por Paula Morales, codigo realizado por Paula Morales con ayuda de IA ChatGPT
+// ----------------------------------------------------
 // MoDULO: conversor_segundos.v
 // Traduccion de segundos (0 a 59) para direccion de ROM
-// ============================================================================
+//-----------------------------------------------------
 module conversor_segundos (
     input  wire [5:0]  salida_s,   // Entrada de segundos del reloj (6 bits)
     output wire [13:0] rom_s       // Salida hacia ROM (14 bits segon diagrama)

@@ -1,4 +1,4 @@
-
+// Codigo generado por Mateo Amaya esquematicos diseñados por Mateo  Amaya
 module decodificador_semana (
 
     input wire [2:0] dia,
