@@ -10,7 +10,7 @@ module generador_clk #(
     input wire clk,
     input wire reset,
     input wire enable_clk,
-    // sekal rtc_sclk es la señal que maneja el reloj del RTC DS1302.
+    // señal rtc_sclk es la señal que maneja el reloj del RTC DS1302.
     output wire rtc_sclk,
     output wire rise_pulse,//pulso de subida de la señal rtc_sclk
     output wire fall_pulse//pulso de bajada de la señal rtc_sclk

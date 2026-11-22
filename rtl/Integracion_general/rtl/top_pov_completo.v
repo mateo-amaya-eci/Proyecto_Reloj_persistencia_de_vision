@@ -1,21 +1,20 @@
 `timescale 1ns / 1ps
 //--------------------------------------------------------------------------------
 // Proyecto: Reloj con persistencia de vision
-// codigo de union relizado por Mateo  Amaya  y Paula Morales, con ayuda de  herramienta de Inteligencia Artificial "ChatGPT"
+// Integracion realizada por Mateo Amaya y Paula Morales.con ayuda de herramientas de IA
 //--------------------------------------------------------------------------------
 
 module top_pov_completo #(
     parameter integer CLK_FREQ_HZ = 27_000_000,
     parameter integer START_DELAY_US = 5
 )(
+    // Entradas fisicas
     input  wire clk,
     input  wire reset,       // Reset activo en alto
     input  wire sensor_eh,
 
-    // Conexion fisica al  rtc DS1302 para la transimiccion y recepcion 
-    // de datos iniciales del reloj y calendario
-    
-    output wire RTC_CE,// señal de habilitacion del rtc
+    // Interfaz fisica del RTC DS1302
+    output wire RTC_CE,
     output wire RTC_SCLK,
     inout  wire RTC_DAT,
 
@@ -24,25 +23,13 @@ module top_pov_completo #(
     output wire [9:0] led_g,
     output wire [9:0] led_b,
 
-    // Salida de los 4 LED de la caratula
-    output wire [3:0] led_caratula,
-
-    // Salidas de observacion y verificacion
-    output wire       rtc_valid_out,
-    output wire [7:0] angulo,
-    output wire [7:0] angulo_hor,
-    output wire [7:0] angulo_min,
-    output wire [7:0] angulo_seg,
-    output wire       match_hor,
-    output wire       match_min,
-    output wire       match_seg,
-    output wire [4:0] led_calendario
+    // Salidas para los 4 LED independientes de la caratula
+    output wire [3:0] led_caratula
 );
 
     // =========================================================
-    // 1. DATOS LEIDOS DEL DS1302
+    // 1. DATOS DEL RTC DS1302 (SENALES INTERNAS)
     // =========================================================
-    //En esta etapa se transmite la señal BF ala inout data, para que empiese a enviar los datos 
 
     wire [7:0] rtc_seconds;
     wire [7:0] rtc_minutes;
@@ -52,18 +39,18 @@ module top_pov_completo #(
     wire [7:0] rtc_weekday;
     wire [7:0] rtc_year;
     wire [7:0] debug_first_byte;
-
+    wire rtc_valid;
+    // se genera una comunicaion serial con el rtc ds1302 para tener los valores iniciales 
+    // de segundos, minutos, horas, dia, dia semana, mes , año
     rtc_reader #(
         .CLK_FREQ_HZ(CLK_FREQ_HZ),
         .START_DELAY_US(START_DELAY_US)
     ) lector_rtc (
         .clk(clk),
         .reset(reset),
-
         .RTC_CE(RTC_CE),
         .RTC_SCLK(RTC_SCLK),
         .RTC_DAT(RTC_DAT),
-
         .seconds(rtc_seconds),
         .minutes(rtc_minutes),
         .hours(rtc_hours),
@@ -71,14 +58,17 @@ module top_pov_completo #(
         .month(rtc_month),
         .weekday(rtc_weekday),
         .year(rtc_year),
-
-        .rtc_valid(rtc_valid_out),
+        .rtc_valid(rtc_valid),
         .debug_first_byte(debug_first_byte)
     );
 
     // =========================================================
     // 2. CONTADOR ANGULAR DEL SENSOR HALL
     // =========================================================
+    // por cada 2 activos del sensor hall se toma el numero de clk del periodo, se divide entre 255
+    // y se suman los pulsos de clk para conocer el numero del angulo del sistema POV
+
+    wire [7:0] angulo;
 
     top_angulo bloque_angular (
         .clk(clk),
@@ -89,8 +79,9 @@ module top_pov_completo #(
 
     // =========================================================
     // 3. RELOJ Y CALENDARIO
-    //    El reloj_top convierte los datos BCD del RTC a binario.
     // =========================================================
+    // al tomar los valores iniciales del ds1302 , empiesa un conteo de
+    // segundo , minuto , hora , mes ,año, dia , dia_semana
 
     wire [5:0] segundos;
     wire [5:0] minutos;
@@ -105,7 +96,6 @@ module top_pov_completo #(
     ) bloque_reloj (
         .clk(clk),
         .reset(reset),
-
         .rtc_seconds(rtc_seconds),
         .rtc_minutes(rtc_minutes),
         .rtc_hours(rtc_hours),
@@ -113,12 +103,10 @@ module top_pov_completo #(
         .rtc_month(rtc_month),
         .rtc_weekday(rtc_weekday),
         .rtc_year(rtc_year),
-        .rtc_valid(rtc_valid_out),
-
+        .rtc_valid(rtc_valid),
         .segundos(segundos),
         .minutos(minutos),
         .horas_visualizacion(horas_visualizacion),
-
         .dia(dia),
         .semana(semana),
         .mes(mes),
@@ -128,10 +116,15 @@ module top_pov_completo #(
     // =========================================================
     // 4. CONVERSION DE HORA A POSICIONES ANGULARES
     // =========================================================
+    // se toma el valor del reloj y genera la sigiente funcion para minutos y segundos (min|seg*256+30)/60
+    // para hora (hora*256+6)/12
 
     wire [11:0] rom_h;
     wire [13:0] rom_m;
     wire [13:0] rom_s;
+    wire [7:0] angulo_hor;
+    wire [7:0] angulo_min;
+    wire [7:0] angulo_seg;
 
     conversor_horas conversor_h (
         .salida_h(horas_visualizacion[3:0]),
@@ -155,13 +148,17 @@ module top_pov_completo #(
     // =========================================================
     // 5. COMPARADORES DE LAS MANECILLAS
     // =========================================================
+    // se compara el angulo ancutual con el angulo hora , minuto y segundo, y cuando son iguales genera en alto el match correspondiente
+
+    wire match_hor;
+    wire match_min;
+    wire match_seg;
 
     comparadores_top comparadores (
         .converseg(angulo_seg),
         .convermin(angulo_min),
         .converhor(angulo_hor),
         .contador_angular(angulo),
-
         .match_seg(match_seg),
         .match_min(match_min),
         .match_hor(match_hor)
@@ -170,6 +167,8 @@ module top_pov_completo #(
     // =========================================================
     // 6. GENERADOR DE MANECILLAS RGB
     // =========================================================
+    // cuando el match es 1 toma en alto la manecilla correpondiente con el color correpondiente
+    // con segundos en rojo, minutos en verde y horas en azul
 
     wire [9:0] manecilla_r;
     wire [9:0] manecilla_g;
@@ -179,7 +178,6 @@ module top_pov_completo #(
         .MATCH_SEG(match_seg),
         .MATCH_MIN(match_min),
         .MATCH_HORA(match_hor),
-
         .LED_R(manecilla_r),
         .LED_G(manecilla_g),
         .LED_B(manecilla_b)
@@ -188,6 +186,11 @@ module top_pov_completo #(
     // =========================================================
     // 7. GENERADOR DEL CALENDARIO
     // =========================================================
+    // se toman los valores del calendario del reloj top, y se toma como un sistema polar, donde cada 
+    // numero y letra entran en una matriz de 5*6 que de forma combinacional, dependiendo del angulo genera 
+    // el numero correspondiente segun la matriz
+
+    wire [4:0] led_calendario;
 
     generacion_calendario calendario (
         .an(angulo),
@@ -200,12 +203,9 @@ module top_pov_completo #(
 
     // =========================================================
     // 8. COMBINACION RGB + CALENDARIO
-    //
-    // Los 5 bits del calendario se aplican a los 5 LED RGB
-    // interiores de cada canal mediante OR bit a bit.
-    // Los 5 LED exteriores siguen siendo controlados solo
-    // por las manecillas.
     // =========================================================
+    // se mescla en led rojo o azul o verde la combinacion con la del calendario , para generar la tira de los 10 leds rgb
+    
 
     assign led_r[4:0] = manecilla_r[4:0] | led_calendario;
     assign led_g[4:0] = manecilla_g[4:0] | led_calendario;
@@ -218,6 +218,7 @@ module top_pov_completo #(
     // =========================================================
     // 9. CARATULA ROM DE 4 LED
     // =========================================================
+    // se genera el alrededor del reloj top . 
 
     rom_caratula_256x4 caratula (
         .dir_angulo(angulo),

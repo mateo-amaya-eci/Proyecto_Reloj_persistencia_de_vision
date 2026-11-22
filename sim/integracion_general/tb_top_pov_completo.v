@@ -15,6 +15,8 @@ module tb_top_pov_completo;
     wire [9:0] led_b;
     wire [3:0] led_caratula;
 
+    // Senales internas observadas exclusivamente por el testbench.
+    // No forman parte de los puertos fisicos del top.
     wire rtc_valid_out;
     wire [7:0] angulo;
     wire [7:0] angulo_hor;
@@ -24,6 +26,16 @@ module tb_top_pov_completo;
     wire match_min;
     wire match_seg;
     wire [4:0] led_calendario;
+
+    assign rtc_valid_out = dut.rtc_valid;
+    assign angulo = dut.angulo;
+    assign angulo_hor = dut.angulo_hor;
+    assign angulo_min = dut.angulo_min;
+    assign angulo_seg = dut.angulo_seg;
+    assign match_hor = dut.match_hor;
+    assign match_min = dut.match_min;
+    assign match_seg = dut.match_seg;
+    assign led_calendario = dut.led_calendario;
 
     integer errores = 0;
 
@@ -59,17 +71,7 @@ module tb_top_pov_completo;
         .led_r(led_r),
         .led_g(led_g),
         .led_b(led_b),
-        .led_caratula(led_caratula),
-
-        .rtc_valid_out(rtc_valid_out),
-        .angulo(angulo),
-        .angulo_hor(angulo_hor),
-        .angulo_min(angulo_min),
-        .angulo_seg(angulo_seg),
-        .match_hor(match_hor),
-        .match_min(match_min),
-        .match_seg(match_seg),
-        .led_calendario(led_calendario)
+        .led_caratula(led_caratula)
     );
 
     // =========================================================
