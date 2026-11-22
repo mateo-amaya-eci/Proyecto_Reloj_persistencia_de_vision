@@ -111,17 +111,14 @@ module tb_rtc_reader;
         };
     end
 
-    // La carga del comando ocurre al entrar en START, mientras CE ya está
-    // alto. Muestrea los bits después de que SCLK haya regresado a reposo.
+    // Se arma el modelo una sola vez al comenzar la transacción. El CE puede
+    // producir un pulso delta al cambiar de estado dentro de la FSM; ese pulso
+    // no debe reiniciar el burst a mitad de la lectura.
     always @(posedge RTC_CE) begin
-        command_shift = 0;
-        command_received = 0;
-        command_bits = 0;
-        read_mode = 0;
-        command_started = 0;
-        data_bit_index = 0;
-        #1;
-        command_started = 1;
+        if (!command_started) begin
+            #1;
+            command_started = 1;
+        end
     end
 
     always @(posedge RTC_SCLK) begin

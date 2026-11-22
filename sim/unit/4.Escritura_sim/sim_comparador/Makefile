@@ -20,6 +20,7 @@ TB = tb_comparadores_top.v
 OUTPUT = sim_comparadores.vvp
 WAVE = sim_comparadores.vcd
 
+.DEFAULT_GOAL := run
 # Compilar
 compile:
 	$(COMPILER) -g2012 -Wall -s tb_comparadores_top -o $(OUTPUT) $(RTL_SOURCES) $(TB)

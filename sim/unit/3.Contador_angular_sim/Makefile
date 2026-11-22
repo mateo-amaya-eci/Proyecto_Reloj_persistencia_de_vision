@@ -24,6 +24,7 @@ TB = tb_top_angulo.v
 OUTPUT = sim_top_angulo.vvp
 WAVE = angulo.vcd
 
+.DEFAULT_GOAL := run
 # Compilar TOP
 compile:
 	$(COMPILER) -g2012 -Wall -s tb_top_angulo -o $(OUTPUT) $(RTL_SOURCES) $(TB)

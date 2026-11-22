@@ -1,47 +1,26 @@
+IVERILOG ?= iverilog
+VVP ?= vvp
+GTKWAVE ?= gtkwave
 
-IVERILOG = iverilog
-VVP = vvp
-GTKWAVE = gtkwave
+RTL_DIR := ../../../../rtl/4.Escritura/generador_manecillas
+RTL := $(RTL_DIR)/generador_manecillas_rgb.v
+TB := tb_generador_manecillas_rgb.v
+OUTPUT := sim_rgb.vvp
+WAVE := sim_rgb.vcd
 
-RTL_DIR = ../../../../rtl/4.Escritura/generador_manecillas
-
-TB_MANECILLAS = tb_generador_manecillas.v
-TB_RGB = tb_generador_manecillas_rgb.v
-
-RTL_MANECILLAS = $(RTL_DIR)/generador_manecillas.v
-RTL_RGB = $(RTL_DIR)/generador_manecillas_rgb.v
-
-OUT_MANECILLAS = sim_manecillas.vvp
-OUT_RGB = sim_rgb.vvp
-
-VCD_MANECILLAS = sim_manecillas.vcd
-VCD_RGB = sim_rgb.vcd
-
-.PHONY: all compile run compile_manecillas run_manecillas compile_rgb run_rgb wave_manecillas wave_rgb clean
+.DEFAULT_GOAL := run
+.PHONY: all compile run wave clean
 
 all: run
 
-compile: compile_manecillas compile_rgb
+compile:
+	$(IVERILOG) -g2012 -Wall -s tb_generador_manecillas_rgb -o $(OUTPUT) $(RTL) $(TB)
 
-run: run_manecillas run_rgb
+run: compile
+	$(VVP) $(OUTPUT)
 
-compile_manecillas:
-	$(IVERILOG) -g2012 -Wall -s tb_generador_manecillas -o $(OUT_MANECILLAS) $(RTL_MANECILLAS) $(TB_MANECILLAS)
-
-run_manecillas: compile_manecillas
-	$(VVP) $(OUT_MANECILLAS)
-
-compile_rgb:
-	$(IVERILOG) -g2012 -Wall -s tb_generador_manecillas_rgb -o $(OUT_RGB) $(RTL_RGB) $(TB_RGB)
-
-run_rgb: compile_rgb
-	$(VVP) $(OUT_RGB)
-
-wave_manecillas: run_manecillas
-	$(GTKWAVE) $(VCD_MANECILLAS)
-
-wave_rgb: run_rgb
-	$(GTKWAVE) $(VCD_RGB)
+wave: run
+	$(GTKWAVE) $(WAVE)
 
 clean:
-	rm -f $(OUT_MANECILLAS) $(OUT_RGB) $(VCD_MANECILLAS) $(VCD_RGB)
+	rm -f $(OUTPUT) $(WAVE)

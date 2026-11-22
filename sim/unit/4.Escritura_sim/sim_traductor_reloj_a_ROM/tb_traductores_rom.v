@@ -3,6 +3,8 @@
 
 module tb_traductores_rom;
 
+    integer errores = 0;
+
     // 1. Señales de prueba (Entradas)
     reg [5:0] seg_in;
     reg [5:0] min_in;
@@ -48,33 +50,45 @@ module tb_traductores_rom;
         min_in = 6'd0;
         hor_in = 4'd1;
         #10;
+        if (rom_seg !== 14'd0 || rom_min !== 14'd0 || rom_hor !== 12'd21)
+            errores = errores + 1;
 
         // Caso 2: Cuarto de escala (15 seg, 15 min, 3 horas)
         seg_in = 6'd15;
         min_in = 6'd15;
         hor_in = 4'd3;
         #10;
+        if (rom_seg !== 14'd64 || rom_min !== 14'd64 || rom_hor !== 12'd64)
+            errores = errores + 1;
 
         // Caso 3: Media escala (30 seg, 30 min, 6 horas)
         seg_in = 6'd30;
         min_in = 6'd30;
         hor_in = 4'd6;
         #10;
+        if (rom_seg !== 14'd128 || rom_min !== 14'd128 || rom_hor !== 12'd128)
+            errores = errores + 1;
 
         // Caso 4: Tres cuartos de escala (45 seg, 45 min, 9 horas)
         seg_in = 6'd45;
         min_in = 6'd45;
         hor_in = 4'd9;
         #10;
+        if (rom_seg !== 14'd192 || rom_min !== 14'd192 || rom_hor !== 12'd192)
+            errores = errores + 1;
 
         // Caso 5: Valores máximos (59 seg, 59 min, 12 horas)
         seg_in = 6'd59;
         min_in = 6'd59;
         hor_in = 4'd12;
         #10;
+        if (rom_seg !== 14'd252 || rom_min !== 14'd252 || rom_hor !== 12'd256)
+            errores = errores + 1;
 
         $display("=========================================================================");
-        $display("Simulación completada con éxito.");
+        if (errores != 0)
+            $fatal(1, "FAIL: %0d resultados incorrectos en conversores", errores);
+        $display("PASS: los tres conversores coinciden en los cinco casos");
         $finish;
     end
 

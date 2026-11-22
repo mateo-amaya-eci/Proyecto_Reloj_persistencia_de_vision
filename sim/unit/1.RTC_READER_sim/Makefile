@@ -16,6 +16,8 @@ TESTBENCH = tb_rtc_reader.v
 OUTPUT = sim_rtc_reader.vvp
 WAVE = $(SIM_DIR)/rtc_reader.vcd
 
+.DEFAULT_GOAL := run
+
 # Buscar todos los módulos Verilog del RTC
 RTL_SOURCES = $(shell find "$(RTL_DIR)" -maxdepth 1 -type f -name '*.v' -print0 | xargs -0 -r printf '"%s" ')
 

@@ -12,6 +12,7 @@ SIM   := $(BUILD)/sim_top_pov_completo.vvp
 TOP := $(RTL)/Integracion_general/rtl/top_pov_completo.v
 TB  := tb_top_pov_completo.v
 
+.DEFAULT_GOAL := all
 .PHONY: all compile sim run wave gtkwave clean
 
 all: sim

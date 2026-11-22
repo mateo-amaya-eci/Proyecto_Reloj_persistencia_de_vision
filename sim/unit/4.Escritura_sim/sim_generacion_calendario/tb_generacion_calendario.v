@@ -19,6 +19,8 @@ module tb_generacion_calendario;
 
     integer vuelta;
     integer angulo;
+    integer errores = 0;
+    integer muestras_calendario = 0;
 
     // =====================================
     // 2. INSTANCIA DEL SISTEMA
@@ -103,6 +105,15 @@ module tb_generacion_calendario;
                 @(negedge clk);
 
                 AN = angulo;
+                #1;
+                if (angulo < 85 || angulo > 170) begin
+                    if (LED !== 5'b00000)
+                        errores = errores + 1;
+                end else begin
+                    muestras_calendario = muestras_calendario + 1;
+                    if ((^LED) === 1'bx)
+                        errores = errores + 1;
+                end
 
             end
 
@@ -119,6 +130,10 @@ module tb_generacion_calendario;
         $display("SIMULACION FINALIZADA");
         $display("Dos vueltas angulares completadas");
         $display("-----------------------------------------");
+
+        if (errores != 0 || muestras_calendario == 0)
+            $fatal(1, "FAIL: errores=%0d; muestras de calendario=%0d", errores, muestras_calendario);
+        $display("PASS: regiones del calendario definidas y fuera de rango apagadas");
 
         $finish;
 

@@ -21,6 +21,7 @@ VCD = $(SIM_DIR)/calendario.vcd
 # Modulos RTL
 RTL = $(wildcard $(RTL_DIR)/*.v)
 
+.DEFAULT_GOAL := run
 # Compilar
 compile:
 	mkdir -p $(SIM_DIR)

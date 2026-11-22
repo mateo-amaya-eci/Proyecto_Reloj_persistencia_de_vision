@@ -15,6 +15,7 @@ RTL = \
 OUTPUT = sim_traductores.vvp
 VCD = sim_traductores.vcd
 
+.DEFAULT_GOAL := run
 .PHONY: compile run wave clean
 
 compile:

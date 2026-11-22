@@ -7,6 +7,8 @@ module tb_comparadores_top;
     reg  [7:0] convermin;
     reg  [7:0] converhor;
     reg  [7:0] contador_angular;
+    integer i;
+    integer errores = 0;
 
     wire       match_seg;
     wire       match_min;
@@ -32,16 +34,18 @@ module tb_comparadores_top;
         convermin = 8'd64;  // 15 minutos mapeados a ángulo
         converhor = 8'd21;  // 1 hora mapeada a ángulo
 
-        // Recorrer el contador angular de 0 a 255
-        contador_angular = 8'd0;
-        #10;
-
-        // Probar barrido angular
-        repeat (256) begin
-            #10;
-            contador_angular = contador_angular + 8'd1;
+        // Verificar que cada comparador solo se activa en su angulo.
+        for (i = 0; i < 256; i = i + 1) begin
+            contador_angular = i[7:0];
+            #1;
+            if (match_seg !== (i == 128)) errores = errores + 1;
+            if (match_min !== (i == 64)) errores = errores + 1;
+            if (match_hor !== (i == 21)) errores = errores + 1;
         end
 
+        if (errores != 0)
+            $fatal(1, "FAIL: %0d comparaciones incorrectas", errores);
+        $display("PASS: comparadores verificados para los 256 angulos");
         $finish;
     end
 

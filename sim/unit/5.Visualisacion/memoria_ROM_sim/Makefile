@@ -11,6 +11,7 @@ TB = tb_rom_caratula_256x32.v
 OUTPUT = sim_rom_caratula.vvp
 VCD = sim_rom_caratula.vcd
 
+.DEFAULT_GOAL := run
 .PHONY: compile run wave clean
 
 compile:

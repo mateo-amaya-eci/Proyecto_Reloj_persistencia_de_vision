@@ -20,6 +20,8 @@ RTL_SOURCES = $(wildcard $(RTL_DIR)/*.v)
 OUTPUT = reloj_sim.vvp
 WAVE = reloj_top.vcd
 
+.DEFAULT_GOAL := run
+
 # Compilar
 compile:
 	$(COMPILER) -g2012 -Wall -s tb_reloj_top -o $(OUTPUT) $(RTL_SOURCES) $(TB)

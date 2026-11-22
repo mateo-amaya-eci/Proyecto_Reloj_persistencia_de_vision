@@ -168,6 +168,12 @@ $display("Hora 12h: %0d:%0d:%0d",
 
         $display("Semana: %0d", semana);
 
+        if (segundos !== 6'd58 || minutos !== 6'd59 || uut.horas !== 5'd23 ||
+            horas_visualizacion !== 5'd11 || dia !== 5'd31 || mes !== 4'd12 ||
+            anio !== 7'd24 || semana !== 3'd7)
+            $fatal(1, "FAIL: carga inicial RTC incorrecta");
+        $display("PASS: carga inicial RTC correcta");
+
 
         // --------------------------------
         // AVANCE DE SEGUNDOS
@@ -182,11 +188,18 @@ $display("Hora 12h: %0d:%0d:%0d",
 
         $display("Segundo 1: %0d:%0d:%0d",
             uut.horas, minutos, segundos);
+        if (segundos !== 6'd59 || minutos !== 6'd59 || uut.horas !== 5'd23)
+            $fatal(1, "FAIL: primer tick no avanzo de 23:59:58 a 23:59:59");
+        $display("PASS: primer tick correcto");
 
         esperar_segundo;
 
         $display("Segundo 2: %0d:%0d:%0d",
             uut.horas, minutos, segundos);
+        if (segundos !== 6'd0 || minutos !== 6'd0 || uut.horas !== 5'd0 ||
+            dia !== 5'd1 || mes !== 4'd1 || anio !== 7'd25 || semana !== 3'd1)
+            $fatal(1, "FAIL: acarreo de medianoche/calendario incorrecto");
+        $display("PASS: acarreo de medianoche y cambio de ano correctos");
 
         esperar_segundo;
 
@@ -202,22 +215,20 @@ $display("Hora 12h: %0d:%0d:%0d",
         $display("--------------------------------");
         $display(" RESULTADO FINAL");
         $display("--------------------------------");
-if (segundos == 1 &&
-    minutos == 0 &&
-    uut.horas == 0 &&
-    horas_visualizacion == 12 &&
-    
-    dia == 1 &&
-    mes == 1 &&
-    anio == 25 &&
-    semana == 1) begin
+if (segundos === 1 &&
+    minutos === 0 &&
+    uut.horas === 0 &&
+    horas_visualizacion === 12 &&
+    dia === 1 &&
+    mes === 1 &&
+    anio === 25 &&
+    semana === 1) begin
 
-    $display("PRUEBA SUPERADA");
-    $display("Cambio de ano.");
+    $display("PASS: reloj avanzo y calendario conserva el cambio de ano");
 
 end else begin
 
-    $display("ERROR EN LA SIMULACION");
+    $fatal(1, "FAIL: estado final incorrecto");
 
 end
 

@@ -83,10 +83,11 @@ module tb_top_angulo;
             errores = errores + 1;
         end
 
-        if (errores == 0)
-            $display("Prueba de avance angular correcta");
-        else
-            $display("Errores detectados: %d", errores);
+        if (errores == 0) begin
+            $display("PASS: avance y reinicio angular correctos");
+        end else begin
+            $fatal(1, "FAIL: %0d errores en el contador angular", errores);
+        end
 
         $finish;
     end
