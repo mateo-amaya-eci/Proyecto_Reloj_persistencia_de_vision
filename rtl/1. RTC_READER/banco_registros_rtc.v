@@ -1,9 +1,11 @@
 `timescale 1ns / 1ps
+//-------------------------------------------------------------
 // codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
-// ============================================================
+// ------------------------------------------------------------
 // BANCO DE REGISTROS PIPO
 // Almacena los 7 bytes útiles del RTC.
-// ============================================================
+// Guarda la informacion de fecha y hora del RTC en los 7 registros diferentes 
+// ------------------------------------------------------------
 
 module banco_registros_rtc (
     input wire clk,

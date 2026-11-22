@@ -1,9 +1,12 @@
 `timescale 1ns / 1ps
+//------------------------------------------------------------
 //codigo generado con inteligencia artificial ChatGPT, y esquematizado con IA
-// ============================================================
+//------------------------------------------------------------
 //  CONTADOR DE BITS
 // Cuenta los 8 bits del comando BF.
-// ============================================================
+// En nuestro proyecto utilizamos el RTC DS1302, que es el circuito encargado de proporcionar la hora y la fecha.Para solicitarle información, primero debemos enviarle un comando de 8 bits
+// el modulo es el encargado de conatr los 8 avances  y avisar cuando se complete 
+//------------------------------------------------------------
 
 module contador_bits (
     input wire clk,
