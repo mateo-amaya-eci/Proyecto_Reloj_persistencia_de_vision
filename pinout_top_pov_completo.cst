@@ -42,7 +42,7 @@ IO_PORT "led_g[4]" IO_TYPE=LVCMOS33;
 IO_LOC "led_b[4]" 75;
 IO_PORT "led_b[4]" IO_TYPE=LVCMOS33;
 
-IO_LOC "led_r[5]" 56;
+IO_LOC "led_r[5]" 19;
 IO_PORT "led_r[5]" IO_TYPE=LVCMOS33;
 IO_LOC "led_g[5]" 57;
 IO_PORT "led_g[5]" IO_TYPE=LVCMOS33;
@@ -51,9 +51,9 @@ IO_PORT "led_b[5]" IO_TYPE=LVCMOS33;
 
 IO_LOC "led_r[6]" 53;
 IO_PORT "led_r[6]" IO_TYPE=LVCMOS33;
-IO_LOC "led_g[6]" 54;
+IO_LOC "led_g[6]" 17;
 IO_PORT "led_g[6]" IO_TYPE=LVCMOS33;
-IO_LOC "led_b[6]" 55;
+IO_LOC "led_b[6]" 20;
 IO_PORT "led_b[6]" IO_TYPE=LVCMOS33;
 
 IO_LOC "led_r[7]" 41;

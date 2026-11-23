@@ -1,0 +1,8014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>synthesis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper{ width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table td.label { min-width: 100px; width: 8%;}
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#about" style=" font-size: 16px;">Synthesis Messages</a></li>
+<li><a href="#summary" style=" font-size: 16px;">Synthesis Details</a></li>
+<li><a href="#resource" style=" font-size: 16px;">Resource</a>
+<ul>
+<li><a href="#usage" style=" font-size: 14px;">Resource Usage Summary</a></li>
+<li><a href="#utilization" style=" font-size: 14px;">Resource Utilization Summary</a></li>
+</ul>
+</li>
+<li><a href="#timing" style=" font-size: 16px;">Timing</a>
+<ul>
+<li><a href="#clock" style=" font-size: 14px;">Clock Summary</a></li>
+<li><a href="#performance" style=" font-size: 14px;">Max Frequency Summary</a></li>
+<li><a href="#detail timing" style=" font-size: 14px;">Detail Timing Paths Informations</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="about">Synthesis Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>GowinSynthesis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\banco_registros_rtc.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_bits.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_bytes.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_divisor.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\control_fase.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\controlador_rtc.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\generador_clk.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\receptor_sipo.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\rtc_reader.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\transmisor_rtc.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\bcd_a_binario.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_anio.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_calendario.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_dia.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_generico.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_mes.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_semana.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\control_calendario.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\divisor_segundo.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\reloj_top.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\contador_angular.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\sistema_hall.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\top_angulo.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\comparador_hor.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\comparador_min.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\comparador_seg.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\comparadores_top.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\bin_to_bcd.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\decodificador_BCD_3col.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\decodificador_numero_2digitos.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\decodificador_semana.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\detector_regiones.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\generacion_calendario.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\mux_onehot_regiones.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\selector_columnas.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\generador_manecillas_rgb.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\conversor_horas.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\conversor_minutos.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\conversor_segundos.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\rom_caratula_256x4.v<br>
+C:\Users\LENOVO\Documents\LTspice\lab&nbsp2&nbspelan\Nueva&nbspcarpeta\lo&nbsprelacionado&nbspcon&nbspdigi\top_pov_completo\src\top_pov_completo.v<br>
+</td>
+</tr>
+<tr>
+<td class="label">GowinSynthesis Constraints File</td>
+<td>---</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.12.04 (64-bit)</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW1NR-LV9QN88PC6/I5</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW1NR-9</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>C</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Sun Nov 22 20:30:49 2026
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2026 Gowin Semiconductor Corporation. ALL rights reserved.</td>
+</tr>
+</table>
+<h1><a name="summary">Synthesis Details</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Top Level Module</td>
+<td>top_pov_completo</td>
+</tr>
+<tr>
+<td class="label">Synthesis Process</td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.375s, Elapsed time = 0h 0m 0.42s, Peak memory usage = 245.898MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.171s, Elapsed time = 0h 0m 0.167s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.069s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.109s, Elapsed time = 0h 0m 0.115s, Peak memory usage = 246.086MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.053s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.019s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.015s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.012s, Peak memory usage = 246.086MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.109s, Elapsed time = 0h 0m 0.109s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.024s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.016s, Peak memory usage = 246.086MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s, Peak memory usage = 272.871MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.14s, Elapsed time = 0h 0m 0.17s, Peak memory usage = 273.055MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.125s, Elapsed time = 0h 0m 0.135s, Peak memory usage = 273.055MB<br/></td>
+</tr>
+<tr>
+<td class="label">Total Time and Memory Usage</td>
+<td>CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 273.055MB</td>
+</tr>
+</table>
+<h1><a name="resource">Resource</a></h1>
+<h2><a name="usage">Resource Usage Summary</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+</tr>
+<tr>
+<td class="label"><b>I/O Port </b></td>
+<td>40</td>
+</tr>
+<tr>
+<td class="label"><b>I/O Buf </b></td>
+<td>40</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
+<td>36</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspIOBUF</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="label"><b>Register </b></td>
+<td>301</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFR</td>
+<td>46</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFRE</td>
+<td>75</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFPE</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFC</td>
+<td>55</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
+<td>122</td>
+</tr>
+<tr>
+<td class="label"><b>LUT </b></td>
+<td>794</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
+<td>86</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
+<td>203</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
+<td>505</td>
+</tr>
+<tr>
+<td class="label"><b>ALU </b></td>
+<td>55</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
+<td>55</td>
+</tr>
+<tr>
+<td class="label"><b>INV </b></td>
+<td>7</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
+<td>7</td>
+</tr>
+</table>
+<h2><a name="utilization">Resource Utilization Summary</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label"><b>Resource</b></td>
+<td><b>Usage</b></td>
+<td><b>Utilization</b></td>
+</tr>
+<tr>
+<td class="label">Logic</td>
+<td>856(801 LUT, 55 ALU) / 8640</td>
+<td>10%</td>
+</tr>
+<tr>
+<td class="label">Register</td>
+<td>301 / 6693</td>
+<td>5%</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp--Register as Latch</td>
+<td>0 / 6693</td>
+<td>0%</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp--Register as FF</td>
+<td>301 / 6693</td>
+<td>5%</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>0 / 26</td>
+<td>0%</td>
+</tr>
+</table>
+<h1><a name="timing">Timing</a></h1>
+<h2><a name="clock">Clock Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<th>NO.</th>
+<th>Clock Name</th>
+<th>Type</th>
+<th>Period</th>
+<th>Frequency(MHz)</th>
+<th>Rise</th>
+<th>Fall</th>
+<th>Source</th>
+<th>Master</th>
+<th>Object</th>
+</tr>
+<tr>
+<td>1</td>
+<td>clk</td>
+<td>Base</td>
+<td>20.000</td>
+<td>50.000</td>
+<td>0.000</td>
+<td>10.000</td>
+<td> </td>
+<td> </td>
+<td>clk_ibuf/I </td>
+</tr>
+</table>
+<h2><a name="performance">Max Frequency Summary:</a></h2>
+<table class="summary_table">
+<tr>
+<th>NO.</th>
+<th>Clock Name</th>
+<th>Constraint</th>
+<th>Actual Fmax</th>
+<th>Logic Level</th>
+<th>Entity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>clk</td>
+<td>50.000(MHz)</td>
+<td>60.859(MHz)</td>
+<td>9</td>
+<td>TOP</td>
+</tr>
+</table>
+<h2><a name="detail timing">Detail Timing Paths Information</a></h2>
+<h3>Path&nbsp1</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_0_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n157_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n157_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_0_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_0_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_0_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp2</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_1_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n156_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n156_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_1_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_1_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_1_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp3</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_2_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n155_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n155_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_2_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_2_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_2_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp4</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_3_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n154_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n154_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_3_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_3_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_3_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp5</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_4_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n153_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n153_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_4_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_4_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_4_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp6</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_5_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n152_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n152_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_5_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_5_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_5_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp7</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_6_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n151_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n151_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_6_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_6_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_6_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp8</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_7_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n150_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n150_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_7_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_7_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_7_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp9</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_8_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n149_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n149_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_8_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_8_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_8_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp10</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_9_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n148_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n148_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_9_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_9_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_9_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp11</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_10_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n147_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n147_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_10_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_10_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_10_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp12</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_11_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n146_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n146_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_11_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_11_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_11_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp13</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_12_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n145_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n145_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_12_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_12_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_12_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp14</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_13_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n144_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n144_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_13_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_13_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_13_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp15</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_14_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n143_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n143_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_14_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_14_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_14_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp16</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_15_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n142_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n142_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_15_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_15_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_15_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp17</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_16_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n141_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n141_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_16_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_16_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_16_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp18</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_17_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n140_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n140_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_17_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_17_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_17_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp19</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_18_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n139_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n139_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_18_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_18_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_18_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp20</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_19_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n138_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n138_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_19_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_19_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_19_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp21</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_20_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n137_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n137_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_20_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_20_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_20_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp22</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_21_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n136_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n136_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_21_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_21_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_21_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp23</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_22_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n135_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n135_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_22_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_22_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_22_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp24</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/contador_23_s1</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n134_s2/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n134_s2/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_23_s1/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_23_s1/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_23_s1</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp25</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>3.569</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>16.789</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.358</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>bloque_angular/hall/generador/tick_1_4_s0</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>clk[R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>clk[R]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>0.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>0.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/CLK</td>
+</tr>
+<tr>
+<td>1.216</td>
+<td>0.458</td>
+<td>tC2Q</td>
+<td>RF</td>
+<td>4</td>
+<td>bloque_angular/hall/medidor/periodo_total_9_s0/Q</td>
+</tr>
+<tr>
+<td>2.122</td>
+<td>0.906</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s9/I1</td>
+</tr>
+<tr>
+<td>3.306</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>FR</td>
+<td>11</td>
+<td>bloque_angular/hall/generador/contador_30_s9/F</td>
+</tr>
+<tr>
+<td>4.064</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/contador_30_s7/I1</td>
+</tr>
+<tr>
+<td>5.248</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>20</td>
+<td>bloque_angular/hall/generador/contador_30_s7/F</td>
+</tr>
+<tr>
+<td>6.006</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/I1</td>
+</tr>
+<tr>
+<td>7.190</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s60/F</td>
+</tr>
+<tr>
+<td>7.948</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/I2</td>
+</tr>
+<tr>
+<td>8.966</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s56/F</td>
+</tr>
+<tr>
+<td>9.724</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/I1</td>
+</tr>
+<tr>
+<td>10.908</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s27/F</td>
+</tr>
+<tr>
+<td>11.666</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/I2</td>
+</tr>
+<tr>
+<td>12.684</td>
+<td>1.018</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s14/F</td>
+</tr>
+<tr>
+<td>13.442</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/I3</td>
+</tr>
+<tr>
+<td>14.089</td>
+<td>0.647</td>
+<td>tINS</td>
+<td>RR</td>
+<td>33</td>
+<td>bloque_angular/hall/generador/sectores_emitidos_7_s5/F</td>
+</tr>
+<tr>
+<td>14.847</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n207_s1/I1</td>
+</tr>
+<tr>
+<td>16.031</td>
+<td>1.184</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/n207_s1/F</td>
+</tr>
+<tr>
+<td>16.789</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/tick_1_4_s0/D</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>20.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>active clock edge time</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>clk</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>1</td>
+<td>clk_ibuf/I</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tINS</td>
+<td>RR</td>
+<td>301</td>
+<td>clk_ibuf/O</td>
+</tr>
+<tr>
+<td>20.758</td>
+<td>0.758</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>bloque_angular/hall/generador/tick_1_4_s0/CLK</td>
+</tr>
+<tr>
+<td>20.358</td>
+<td>-0.400</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>bloque_angular/hall/generador/tick_1_4_s0</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>20.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 8.603, 53.664%; route: 6.970, 43.477%; tC2Q: 0.458, 2.859%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.758, 100.000%</td></tr>
+</table>
+<br/>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

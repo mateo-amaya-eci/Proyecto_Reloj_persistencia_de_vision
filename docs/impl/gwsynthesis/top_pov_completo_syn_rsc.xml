@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top_pov_completo" Lut="214" T_Register="301(0)" T_Alu="55(0)" T_Lut="801(214)">
+ <SubModule name="lector_rtc" Register="11" Lut="18" T_Register="121(11)" T_Alu="31(0)" T_Lut="78(18)">
+  <SubModule name="generador" T_Register="36(0)" T_Alu="31(0)" T_Lut="16(0)">
+   <SubModule name="divisor" Register="33" Alu="31" Lut="13" T_Register="33(33)" T_Alu="31(31)" T_Lut="13(13)"/>
+   <SubModule name="fase" Register="3" Lut="3" T_Register="3(3)" T_Lut="3(3)"/>
+  </SubModule>
+  <SubModule name="transmisor" Register="9" Lut="9" T_Register="13(9)" T_Lut="15(9)">
+   <SubModule name="contador" Register="4" Lut="6" T_Register="4(4)" T_Lut="6(6)"/>
+  </SubModule>
+  <SubModule name="receptor" Register="12" Lut="5" T_Register="12(12)" T_Lut="5(5)"/>
+  <SubModule name="contador_bytes_inst" Register="4" Lut="6" T_Register="4(4)" T_Lut="6(6)"/>
+  <SubModule name="registros" Register="42" Lut="7" T_Register="42(42)" T_Lut="7(7)"/>
+  <SubModule name="controlador" Register="3" Lut="11" T_Register="3(3)" T_Lut="11(11)"/>
+ </SubModule>
+ <SubModule name="bloque_angular" Lut="1" T_Register="110(0)" T_Lut="281(1)">
+  <SubModule name="hall" T_Register="102(0)" T_Lut="269(0)">
+   <SubModule name="medidor" Register="61" Lut="79" T_Register="61(61)" T_Lut="79(79)"/>
+   <SubModule name="generador" Register="41" Lut="190" T_Register="41(41)" T_Lut="190(190)"/>
+  </SubModule>
+  <SubModule name="contador" Register="8" Lut="11" T_Register="8(8)" T_Lut="11(11)"/>
+ </SubModule>
+ <SubModule name="bloque_reloj" Register="1" T_Register="70(1)" T_Alu="24(0)" T_Lut="168(0)">
+  <SubModule name="divisor_inst" Register="33" Lut="62" T_Register="33(33)" T_Lut="62(62)"/>
+  <SubModule name="contador_segundos" Register="6" Lut="16" T_Register="6(6)" T_Lut="16(16)"/>
+  <SubModule name="contador_minutos" Register="6" Lut="17" T_Register="6(6)" T_Lut="17(17)"/>
+  <SubModule name="contador_horas" Register="5" Lut="11" T_Register="5(5)" T_Lut="11(11)"/>
+  <SubModule name="calendario_inst" T_Register="19(0)" T_Lut="52(0)">
+   <SubModule name="U_DIA" T_Register="5(0)" T_Lut="16(0)">
+    <SubModule name="contador_dia_inst" Register="5" Lut="16" T_Register="5(5)" T_Lut="16(16)"/>
+   </SubModule>
+   <SubModule name="U_SEMANA" T_Register="3(0)" T_Lut="5(0)">
+    <SubModule name="contador_semana_inst" Register="3" Lut="5" T_Register="3(3)" T_Lut="5(5)"/>
+   </SubModule>
+   <SubModule name="U_MES" T_Register="4(0)" T_Lut="10(0)">
+    <SubModule name="contador_mes_inst" Register="4" Lut="10" T_Register="4(4)" T_Lut="10(10)"/>
+   </SubModule>
+   <SubModule name="U_ANIO" T_Register="7(0)" T_Lut="21(0)">
+    <SubModule name="contador_anio_inst" Register="7" Lut="21" T_Register="7(7)" T_Lut="21(21)"/>
+   </SubModule>
+  </SubModule>
+  <SubModule name="conversor" Alu="24" Lut="10" T_Alu="24(24)" T_Lut="10(10)"/>
+ </SubModule>
+ <SubModule name="comparadores" T_Lut="49(0)">
+  <SubModule name="comp_s" Lut="25" T_Lut="25(25)"/>
+  <SubModule name="comp_m" Lut="24" T_Lut="24(24)"/>
+ </SubModule>
+ <SubModule name="caratula" Lut="11" T_Lut="11(11)"/>
+</Module>

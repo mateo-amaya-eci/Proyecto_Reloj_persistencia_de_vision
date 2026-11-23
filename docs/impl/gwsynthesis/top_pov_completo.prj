@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
+    <FileList>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\banco_registros_rtc.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_bits.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_bytes.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_divisor.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\control_fase.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\controlador_rtc.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\generador_clk.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\receptor_sipo.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\rtc_reader.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\transmisor_rtc.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\bcd_a_binario.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_anio.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_calendario.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_dia.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_generico.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_mes.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_semana.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\control_calendario.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\divisor_segundo.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\reloj_top.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\contador_angular.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\sistema_hall.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\top_angulo.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\comparador_hor.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\comparador_min.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\comparador_seg.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\comparadores_top.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\bin_to_bcd.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\decodificador_BCD_3col.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\decodificador_numero_2digitos.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\decodificador_semana.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\detector_regiones.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\generacion_calendario.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\mux_onehot_regiones.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\selector_columnas.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\generador_manecillas_rgb.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\conversor_horas.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\conversor_minutos.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\conversor_segundos.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\rom_caratula_256x4.v" type="verilog"/>
+        <File path="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\top_pov_completo.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_style" value="auto"/>
+        <Option type="global_freq" value="50.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="map_option" value="1"/>
+        <Option type="max_fanout" value="1000"/>
+        <Option type="netlist_hierarchy" value="1"/>
+        <Option type="opt_goal" value="auto"/>
+        <Option type="output_file" value="C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\impl\gwsynthesis\top_pov_completo.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="ram_style" value="auto"/>
+        <Option type="rom_style" value="auto"/>
+        <Option type="shift_reg" value="auto"/>
+        <Option type="vcc" value="1.2"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

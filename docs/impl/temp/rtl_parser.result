@@ -1,0 +1,1052 @@
+[
+    {
+        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+        "InstLine": 7,
+        "InstName": "top_pov_completo",
+        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+        "ModuleLine": 7,
+        "ModuleName": "top_pov_completo",
+        "SubInsts": [
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 48,
+                "InstName": "lector_rtc",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                "ModuleLine": 8,
+                "ModuleName": "rtc_reader",
+                "SubInsts": [
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 120,
+                        "InstName": "generador",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generador_clk.v",
+                        "ModuleLine": 7,
+                        "ModuleName": "generador_clk",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generador_clk.v",
+                                "InstLine": 23,
+                                "InstName": "divisor",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_divisor.v",
+                                "ModuleLine": 7,
+                                "ModuleName": "contador_divisor"
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generador_clk.v",
+                                "InstLine": 29,
+                                "InstName": "fase",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_fase.v",
+                                "ModuleLine": 8,
+                                "ModuleName": "control_fase"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 133,
+                        "InstName": "transmisor",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/transmisor_rtc.v",
+                        "ModuleLine": 10,
+                        "ModuleName": "transmisor_rtc",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/transmisor_rtc.v",
+                                "InstLine": 71,
+                                "InstName": "contador",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_bits.v",
+                                "ModuleLine": 11,
+                                "ModuleName": "contador_bits"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 148,
+                        "InstName": "receptor",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/receptor_sipo.v",
+                        "ModuleLine": 9,
+                        "ModuleName": "receptor_sipo"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 161,
+                        "InstName": "contador_bytes_inst",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_bytes.v",
+                        "ModuleLine": 8,
+                        "ModuleName": "contador_bytes"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 174,
+                        "InstName": "registros",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/banco_registros_rtc.v",
+                        "ModuleLine": 10,
+                        "ModuleName": "banco_registros_rtc"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rtc_reader.v",
+                        "InstLine": 194,
+                        "InstName": "controlador",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/controlador_rtc.v",
+                        "ModuleLine": 8,
+                        "ModuleName": "controlador_rtc"
+                    }
+                ]
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 73,
+                "InstName": "bloque_angular",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_angulo.v",
+                "ModuleLine": 5,
+                "ModuleName": "top_angulo",
+                "SubInsts": [
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_angulo.v",
+                        "InstLine": 23,
+                        "InstName": "hall",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/sistema_hall.v",
+                        "ModuleLine": 105,
+                        "ModuleName": "sistema_hall_top",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/sistema_hall.v",
+                                "InstLine": 117,
+                                "InstName": "medidor",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/sistema_hall.v",
+                                "ModuleLine": 4,
+                                "ModuleName": "medidor_periodo_efecto_hall"
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/sistema_hall.v",
+                                "InstLine": 129,
+                                "InstName": "generador",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/sistema_hall.v",
+                                "ModuleLine": 61,
+                                "ModuleName": "generador_pulso_paso"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_angulo.v",
+                        "InstLine": 32,
+                        "InstName": "contador",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_angular.v",
+                        "ModuleLine": 8,
+                        "ModuleName": "contador_angular"
+                    }
+                ]
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 96,
+                "InstName": "bloque_reloj",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                "ModuleLine": 6,
+                "ModuleName": "reloj_top",
+                "SubInsts": [
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 38,
+                        "InstName": "divisor_inst",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/divisor_segundo.v",
+                        "ModuleLine": 5,
+                        "ModuleName": "divisor_segundo"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 116,
+                        "InstName": "contador_segundos",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_generico.v",
+                        "ModuleLine": 5,
+                        "ModuleName": "contador_generico"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 134,
+                        "InstName": "contador_minutos",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_generico.v",
+                        "ModuleLine": 5,
+                        "ModuleName": "contador_generico"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 152,
+                        "InstName": "contador_horas",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_generico.v",
+                        "ModuleLine": 5,
+                        "ModuleName": "contador_generico"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 164,
+                        "InstName": "conversor_horas",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "ModuleLine": 236,
+                        "ModuleName": "conversor_24h_a_12h"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 177,
+                        "InstName": "calendario_inst",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_calendario.v",
+                        "ModuleLine": 6,
+                        "ModuleName": "control_calendario",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_calendario.v",
+                                "InstLine": 34,
+                                "InstName": "U_DIA",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_dia.v",
+                                "ModuleLine": 6,
+                                "ModuleName": "contador_dia",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_dia.v",
+                                        "InstLine": 71,
+                                        "InstName": "contador_dia_inst",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_calendario.v",
+                                        "ModuleLine": 5,
+                                        "ModuleName": "contador_calendario"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_calendario.v",
+                                "InstLine": 56,
+                                "InstName": "U_SEMANA",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_semana.v",
+                                "ModuleLine": 5,
+                                "ModuleName": "contador_semana",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_semana.v",
+                                        "InstLine": 20,
+                                        "InstName": "contador_semana_inst",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_calendario.v",
+                                        "ModuleLine": 5,
+                                        "ModuleName": "contador_calendario"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_calendario.v",
+                                "InstLine": 76,
+                                "InstName": "U_MES",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_mes.v",
+                                "ModuleLine": 5,
+                                "ModuleName": "contador_mes",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_mes.v",
+                                        "InstLine": 20,
+                                        "InstName": "contador_mes_inst",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_calendario.v",
+                                        "ModuleLine": 5,
+                                        "ModuleName": "contador_calendario"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/control_calendario.v",
+                                "InstLine": 96,
+                                "InstName": "U_ANIO",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_anio.v",
+                                "ModuleLine": 5,
+                                "ModuleName": "contador_anio",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_anio.v",
+                                        "InstLine": 20,
+                                        "InstName": "contador_anio_inst",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/contador_calendario.v",
+                                        "ModuleLine": 5,
+                                        "ModuleName": "contador_calendario"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/reloj_top.v",
+                        "InstLine": 209,
+                        "InstName": "conversor",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bcd_a_binario.v",
+                        "ModuleLine": 6,
+                        "ModuleName": "bcd_a_binario"
+                    }
+                ]
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 129,
+                "InstName": "conversor_h",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/conversor_horas.v",
+                "ModuleLine": 7,
+                "ModuleName": "conversor_horas"
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 134,
+                "InstName": "conversor_m",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/conversor_minutos.v",
+                "ModuleLine": 7,
+                "ModuleName": "conversor_minutos"
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 139,
+                "InstName": "conversor_s",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/conversor_segundos.v",
+                "ModuleLine": 7,
+                "ModuleName": "conversor_segundos"
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 157,
+                "InstName": "comparadores",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparadores_top.v",
+                "ModuleLine": 7,
+                "ModuleName": "comparadores_top",
+                "SubInsts": [
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparadores_top.v",
+                        "InstLine": 19,
+                        "InstName": "comp_s",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparador_seg.v",
+                        "ModuleLine": 7,
+                        "ModuleName": "comparador_seg"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparadores_top.v",
+                        "InstLine": 26,
+                        "InstName": "comp_m",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparador_min.v",
+                        "ModuleLine": 7,
+                        "ModuleName": "comparador_min"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparadores_top.v",
+                        "InstLine": 33,
+                        "InstName": "comp_h",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/comparador_hor.v",
+                        "ModuleLine": 7,
+                        "ModuleName": "comparador_hor"
+                    }
+                ]
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 177,
+                "InstName": "manecillas",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generador_manecillas_rgb.v",
+                "ModuleLine": 2,
+                "ModuleName": "generador_manecillas_rgb"
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 195,
+                "InstName": "calendario",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                "ModuleLine": 3,
+                "ModuleName": "generacion_calendario",
+                "SubInsts": [
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 28,
+                        "InstName": "REGIONES",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/detector_regiones.v",
+                        "ModuleLine": 3,
+                        "ModuleName": "detector_regiones"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 43,
+                        "InstName": "COLUMNAS",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/selector_columnas.v",
+                        "ModuleLine": 5,
+                        "ModuleName": "selector_columnas"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 57,
+                        "InstName": "conv_dia",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                        "ModuleLine": 83,
+                        "ModuleName": "bin_a_bcd",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 102,
+                                "InstName": "e1",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 109,
+                                "InstName": "e2",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 116,
+                                "InstName": "e3",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 123,
+                                "InstName": "e4",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 130,
+                                "InstName": "e5",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 137,
+                                "InstName": "e6",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 144,
+                                "InstName": "e7",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 62,
+                        "InstName": "conv_mes",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                        "ModuleLine": 83,
+                        "ModuleName": "bin_a_bcd",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 102,
+                                "InstName": "e1",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 109,
+                                "InstName": "e2",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 116,
+                                "InstName": "e3",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 123,
+                                "InstName": "e4",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 130,
+                                "InstName": "e5",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 137,
+                                "InstName": "e6",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 144,
+                                "InstName": "e7",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 67,
+                        "InstName": "conv_ano",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                        "ModuleLine": 83,
+                        "ModuleName": "bin_a_bcd",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 102,
+                                "InstName": "e1",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 109,
+                                "InstName": "e2",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 116,
+                                "InstName": "e3",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 123,
+                                "InstName": "e4",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 130,
+                                "InstName": "e5",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 137,
+                                "InstName": "e6",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "InstLine": 144,
+                                "InstName": "e7",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "etapa_double_dabble",
+                                "SubInsts": [
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 15,
+                                        "InstName": "u_unidades",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    },
+                                    {
+                                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "InstLine": 30,
+                                        "InstName": "u_decenas",
+                                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/bin_to_bcd.v",
+                                        "ModuleLine": 53,
+                                        "ModuleName": "mayor4_suma3"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 91,
+                        "InstName": "semana",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_semana.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "decodificador_semana"
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 102,
+                        "InstName": "decod_dia",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "decodificador_numero_2digitos",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 20,
+                                "InstName": "decenas",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 30,
+                                "InstName": "unidades",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 115,
+                        "InstName": "decod_mes",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "decodificador_numero_2digitos",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 20,
+                                "InstName": "decenas",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 30,
+                                "InstName": "unidades",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 127,
+                        "InstName": "decod_ano",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "decodificador_numero_2digitos",
+                        "SubInsts": [
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 20,
+                                "InstName": "decenas",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            },
+                            {
+                                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_numero_2digitos.v",
+                                "InstLine": 30,
+                                "InstName": "unidades",
+                                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/decodificador_BCD_3col.v",
+                                "ModuleLine": 2,
+                                "ModuleName": "decodificador_bcd_3col"
+                            }
+                        ]
+                    },
+                    {
+                        "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/generacion_calendario.v",
+                        "InstLine": 141,
+                        "InstName": "mux_regiones",
+                        "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/mux_onehot_regiones.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "mux_onehot_regiones"
+                    }
+                ]
+            },
+            {
+                "InstFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/top_pov_completo.v",
+                "InstLine": 223,
+                "InstName": "caratula",
+                "ModuleFile": "C:/Users/LENOVO/Documents/LTspice/lab 2 elan/Nueva carpeta/lo relacionado con digi/top_pov_completo/src/rom_caratula_256x4.v",
+                "ModuleLine": 4,
+                "ModuleName": "rom_caratula_256x4"
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+-d C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\impl\gwsynthesis\top_pov_completo.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\pinout_top_pov_completo.cst
+-cfg C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\impl\pnr\device.cfg
+-sdc C:\Users\LENOVO\Documents\LTspice\lab 2 elan\Nueva carpeta\lo relacionado con digi\top_pov_completo\src\reloj_timing.sdc.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-place_option 0
+-route_option 0
+-retiming_resource none
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 50.000
