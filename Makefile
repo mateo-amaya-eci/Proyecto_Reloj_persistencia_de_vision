@@ -1,3 +1,4 @@
+# codigo de makefile generado con inteligencia artificial chatgpt
 .DEFAULT_GOAL := sim-all
 
 # Simulaciones del proyecto. Ejecutar desde la carpeta raiz con `make`.
@@ -30,16 +31,16 @@ help:
 	@echo "  make sim-manecillas  Simula generador RGB de manecillas"
 	@echo "  make sim-rom         Simula ROM de caratula"
 	@echo "  make sim-integracion Simula el top completo"
-	@echo "  make waves          Genera los VCD de todas las simulaciones"
-	@echo "  make wave-rtc       Ejecuta RTC y abre su VCD en GTKWave"
-	@echo "  make wave-reloj     Ejecuta reloj y abre su VCD en GTKWave"
-	@echo "  make wave-angular   Ejecuta sistema angular y abre su VCD"
-	@echo "  make wave-conversores Abre formas de onda de conversores"
-	@echo "  make wave-comparadores Abre formas de onda de comparadores"
-	@echo "  make wave-calendario Abre formas de onda de calendario"
-	@echo "  make wave-manecillas Abre formas de onda RGB"
-	@echo "  make wave-rom       Abre formas de onda de la ROM"
-	@echo "  make wave-integracion Ejecuta integracion y abre su VCD"
+	@echo "  make waves           Genera todos los VCD sin abrir GTKWave"
+	@echo "  make wave-rtc        Simula RTC y abre su VCD"
+	@echo "  make wave-reloj      Simula reloj y abre su VCD"
+	@echo "  make wave-angular    Simula angulo y abre su VCD"
+	@echo "  make wave-conversores Simula conversores y abre su VCD"
+	@echo "  make wave-comparadores Simula comparadores y abre su VCD"
+	@echo "  make wave-calendario Simula calendario y abre su VCD"
+	@echo "  make wave-manecillas Simula RGB y abre su VCD"
+	@echo "  make wave-rom        Simula ROM y abre su VCD"
+	@echo "  make wave-integracion Simula integracion y abre su VCD"
 	@echo "  make clean           Elimina archivos generados"
 
 sim-rtc:
@@ -73,10 +74,10 @@ sim-unit: sim-rtc sim-reloj sim-angular sim-conversores sim-comparadores sim-cal
 
 sim-all: sim-unit sim-integracion
 
-# Generar todos los VCD sin abrir GTKWave.
+# Ejecuta todas las simulaciones para generar sus archivos .vcd.
 waves: sim-all
 
-# Ejecutar una simulacion y abrir el VCD correspondiente.
+# Ejecuta una simulacion y abre su archivo de ondas con GTKWave.
 wave-rtc:
 	$(MAKE) -C $(SIM_RTC) wave
 

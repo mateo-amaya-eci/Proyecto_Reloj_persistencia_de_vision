@@ -1,4 +1,4 @@
-
+// codigo diseñado por paula Morales
 module generador_manecillas_rgb (
     input wire MATCH_SEG,
     input wire MATCH_MIN,
