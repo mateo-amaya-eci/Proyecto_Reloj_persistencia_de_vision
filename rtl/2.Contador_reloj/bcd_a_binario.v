@@ -1,6 +1,6 @@
 //----------------------------------------------------------------
 // Conversor de la salida del DS1302 (BCD) a binario.
-// Codigo generado por IA basado en los esquematicos diseñados por Mateo Amaya.
+// Codigo diseñado por  Mateo Amaya.
 // ----------------------------------------------------------------
 
 module bcd_a_binario (

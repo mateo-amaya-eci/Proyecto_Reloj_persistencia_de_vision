@@ -129,14 +129,17 @@ También es posible ejecutar cada entorno de simulación de manera independiente
 
 | Comando | Módulo o sistema |
 |---|---|
-| `make sim-rtc` | Lector del RTC DS1302. |
-| `make sim-reloj` | Contadores de tiempo y calendario. |
-| `make sim-angular` | Detección Hall y generación de posición angular. |
-| `make sim-conversores` | Conversores de tiempo a posiciones de representación. |
-| `make sim-comparadores` | Comparadores de las manecillas. |
-| `make sim-calendario` | Generación de la representación del calendario. |
-| `make sim-manecillas` | Generación RGB de las manecillas. |
-| `make sim-rom` | Memoria ROM de la carátula. |
+| Comando | Módulo o sistema | Guía de simulación |
+|---|---|---|
+| `make sim-rtc` | Lector del RTC DS1302. | [README](sim/unit/1.RTC_READER_sim/README.md) |
+| `make sim-reloj` | Contadores de tiempo y calendario. | [README](sim/unit/2.Contador_reloj_sim/README.md) |
+| `make sim-angular` | Detección Hall y generación de posición angular. | [README](sim/unit/3.Contador_angular_sim/README.md) |
+| `make sim-conversores` | Conversores de tiempo a posiciones de representación. | [README](sim/unit/4.Escritura_sim/sim_traductor_reloj_a_ROM/README.md) |
+| `make sim-comparadores` | Comparadores de las manecillas. | [README](sim/unit/4.Escritura_sim/sim_comparador/README.md) |
+| `make sim-calendario` | Generación de la representación del calendario. | [README](sim/unit/4.Escritura_sim/sim_generacion_calendario/README.md) |
+| `make sim-manecillas` | Generación RGB de las manecillas. | [README](sim/unit/4.Escritura_sim/sim_generador_manecillas/README.md) |
+| `make sim-rom` | Memoria ROM de la carátula. | [README](sim/unit/5.Visualisacion/memoria_ROM_sim/README.md) |
+| `make sim-integracion` | Sistema completo. | [README](sim/integracion_general/README.txt) |
 
 ### Visualización de resultados
 
